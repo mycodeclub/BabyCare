@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bookings · Aanchal Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="../assets/css/theme.css" rel="stylesheet">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar"><a class="brand" href="../index.html"><svg viewBox="0 0 40 40"><path d="M20 35C9 27 4 20 4 13a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 7-5 14-16 22Z" fill="#b4537a"/><circle cx="20" cy="17" r="5" fill="#fff"/></svg>Aanchal</a>
+<div class="side-label">Overview</div>
+<a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i>Dashboard</a>
+<a class="side-link active" href="bookings.html"><i class="bi bi-calendar2-check"></i>Bookings<span class="badge rounded-pill">12</span></a>
+<div class="side-label">People</div>
+<a class="side-link" href="customers.html"><i class="bi bi-people"></i>Families</a>
+<a class="side-link" href="caregivers.html"><i class="bi bi-person-badge"></i>Caregivers</a>
+<a class="side-link" href="partners.html"><i class="bi bi-hospital"></i>Partners</a>
+<div class="side-label">Business</div>
+<a class="side-link" href="packages.html"><i class="bi bi-box-seam"></i>Services & plans</a>
+<a class="side-link" href="referrals.html"><i class="bi bi-gift"></i>Referrals & coupons</a>
+<div class="side-label">System</div>
+<a class="side-link" href="#"><i class="bi bi-geo-alt"></i>Zones & hubs</a>
+<a class="side-link" href="#"><i class="bi bi-credit-card"></i>Payments</a>
+<a class="side-link" href="#"><i class="bi bi-journal-text"></i>Content & SOPs</a>
+<a class="side-link" href="#"><i class="bi bi-gear"></i>Settings</a>
+<div class="mt-auto pt-3"><div class="a-card-flat p-3 bg-rose-50 border-0"><div class="fs-xs text-muted-a">Helpline queue</div><div class="fw-semibold">3 waiting · 2 nurses online</div></div></div></aside><div class="offcanvas-backdrop-a"></div>
+<div class="main">
+<header class="topbar">
+  <button class="btn btn-ghost btn-sm sidebar-toggle" data-toggle-sidebar aria-label="Menu"><i class="bi bi-list"></i></button>
+  <div class="search"><i class="bi bi-search"></i><input class="form-control form-control-sm" placeholder="Search families, caregivers, bookings…"></div>
+  <div class="ms-auto d-flex align-items-center gap-2">
+    <span class="chip grey d-none d-md-inline-flex"><i class="bi bi-geo-alt"></i>All zones</span>
+    <button class="btn btn-ghost btn-sm position-relative" aria-label="Notifications"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle p-1 rounded-circle" style="background:#b4537a"></span></button>
+    <div class="d-flex align-items-center gap-2"><span class="avatar bg-rose-50 text-rose" style="width:36px;height:36px">RK</span><span class="fs-sm fw-medium d-none d-sm-inline">Ritika (Ops)</span></div>
+  </div>
+</header>
+<main class="content">
+<div class="page-head"><div><h1>Bookings &amp; dispatch</h1><div class="text-ink-2 fs-sm mt-1">Assign caregivers, track visits, handle reassignments</div></div><div class="d-flex flex-wrap gap-2"><button class="btn btn-ghost btn-sm"><i class="bi bi-arrow-repeat"></i> Auto-assign</button><button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> New booking</button></div></div><ul class="nav nav-pills gap-2 mb-3 fs-sm" role="tablist">
+  <li class="nav-item"><button class="btn btn-sm btn-ghost active" data-bs-toggle="pill" data-bs-target="#tList" style="--bs-btn-active-bg:#2f2438;--bs-btn-active-color:#fff">List</button></li>
+  <li class="nav-item"><button class="btn btn-sm btn-ghost" data-bs-toggle="pill" data-bs-target="#tBoard" style="--bs-btn-active-bg:#2f2438;--bs-btn-active-color:#fff">Dispatch board</button></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="tList">
+<div class="a-card"><div class="a-card-h flex-wrap gap-2"><div class="filters">
+  <select class="form-select"><option>Today</option><option>Tomorrow</option><option>This week</option></select>
+  <select class="form-select"><option>All zones</option><option>Chandigarh</option><option>Mohali</option></select>
+  <select class="form-select"><option>All services</option><option>Baby massage</option><option>Nurse visit</option><option>Japa</option></select>
+  <select class="form-select"><option>All statuses</option><option>Scheduled</option><option>In progress</option><option>Reassigning</option></select>
+</div><span class="fs-xs text-muted-a">62 bookings</span></div>
+<div class="table-responsive"><table class="table table-a"><thead><tr><th>ID</th><th>Family</th><th>Service</th><th>Source</th><th>When</th><th>Caregiver</th><th>Status</th><th></th></tr></thead><tbody><tr><td class="fw-medium">BK-24581</td><td>Priya Kapoor<div class="fs-xs text-muted-a">Sector 35, CHD</div></td><td>Baby massage</td><td><span class="chip grey">Plan · Sutika</span></td><td class="text-nowrap">31 Oct, 10:30</td><td>Sunita D.</td><td><span class="status warn">In progress</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24580</td><td>Anjali Mehta<div class="fs-xs text-muted-a">Mohali Ph 3B2</div></td><td>Nurse visit · Wk 34</td><td><span class="chip grey">Plan · Garbh</span></td><td class="text-nowrap">31 Oct, 11:00</td><td>Kiran (GNM)</td><td><span class="status info">Scheduled</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24579</td><td>Rupinder Gill<div class="fs-xs text-muted-a">Sector 47, CHD</div></td><td>Baby first bath</td><td><span class="chip grey">À la carte</span></td><td class="text-nowrap">31 Oct, 11:00</td><td>—</td><td><span class="status bad">Reassigning</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24577</td><td>Neetu Bansal<div class="fs-xs text-muted-a">Mohali Sec 70</div></td><td>Lactation visit</td><td><span class="chip grey">Plan · Navjaat 3</span></td><td class="text-nowrap">31 Oct, 12:30</td><td>Dr. partner (LC)</td><td><span class="status info">Scheduled</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24574</td><td>Shweta Arora<div class="fs-xs text-muted-a">Sector 21, CHD</div></td><td>Night japa shift</td><td><span class="chip grey">Monthly</span></td><td class="text-nowrap">30 Oct, 20:00</td><td>Kamla R.</td><td><span class="status ok">Completed</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24570</td><td>Gurpreet Kaur<div class="fs-xs text-muted-a">Mohali Ph 10</div></td><td>Mother massage</td><td><span class="chip grey">Plan · Sampoorna</span></td><td class="text-nowrap">30 Oct, 16:00</td><td>Rani S.</td><td><span class="status ok">Completed</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr><tr><td class="fw-medium">BK-24566</td><td>Komal Jain<div class="fs-xs text-muted-a">Sector 8, CHD</div></td><td>Prenatal yoga</td><td><span class="chip grey">Credits</span></td><td class="text-nowrap">30 Oct, 07:30</td><td>Partner instructor</td><td><span class="status mute">Cancelled</span></td><td class="text-end"><button class="btn btn-ghost btn-sm" aria-label="More"><i class="bi bi-three-dots"></i></button></td></tr></tbody></table></div>
+<div class="d-flex justify-content-between align-items-center p-3 fs-sm text-muted-a border-top"><span>Showing 1–7 of 62</span><div class="d-flex gap-1"><button class="btn btn-ghost btn-sm">Prev</button><button class="btn btn-ghost btn-sm">Next</button></div></div></div>
+</div>
+<div class="tab-pane fade" id="tBoard"><div class="row g-3">
+  <div class="col-md-6 col-xl-3"><div class="dispatch-col"><div class="d-flex justify-content-between mb-2 fs-sm fw-semibold"><span>Unassigned</span><span class="chip">3</span></div>
+    <div class="dispatch-card"><b>First bath</b> · Sec 47<div class="text-muted-a fs-xs">11:00 · needs daai-maa</div><button class="btn btn-primary btn-sm mt-2 w-100">Assign</button></div>
+    <div class="dispatch-card"><b>Baby massage</b> · Ph 7<div class="text-muted-a fs-xs">15:00 · plan</div></div></div></div>
+  <div class="col-md-6 col-xl-3"><div class="dispatch-col"><div class="d-flex justify-content-between mb-2 fs-sm fw-semibold"><span>Scheduled</span><span class="chip sky">24</span></div>
+    <div class="dispatch-card"><b>Nurse visit</b> · Ph 3B2<div class="text-muted-a fs-xs">11:00 · Kiran (GNM)</div></div>
+    <div class="dispatch-card"><b>Lactation</b> · Sec 70<div class="text-muted-a fs-xs">12:30 · partner LC</div></div></div></div>
+  <div class="col-md-6 col-xl-3"><div class="dispatch-col"><div class="d-flex justify-content-between mb-2 fs-sm fw-semibold"><span>In progress</span><span class="chip gold">9</span></div>
+    <div class="dispatch-card"><b>Baby massage</b> · Sec 35<div class="text-muted-a fs-xs">Sunita D. · checked in 10:27</div><div class="progress mt-2"><div class="progress-bar" style="width:55%"></div></div></div></div></div>
+  <div class="col-md-6 col-xl-3"><div class="dispatch-col"><div class="d-flex justify-content-between mb-2 fs-sm fw-semibold"><span>Completed</span><span class="chip sage">26</span></div>
+    <div class="dispatch-card"><b>Mother massage</b> · Ph 10<div class="text-muted-a fs-xs">Rani S. · ★ 5.0</div></div></div></div>
+</div></div>
+</div>
+</main>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

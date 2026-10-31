@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Aanchal Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="../assets/css/theme.css" rel="stylesheet">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar"><a class="brand" href="../index.html"><svg viewBox="0 0 40 40"><path d="M20 35C9 27 4 20 4 13a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 7-5 14-16 22Z" fill="#b4537a"/><circle cx="20" cy="17" r="5" fill="#fff"/></svg>Aanchal</a>
+<div class="side-label">Overview</div>
+<a class="side-link active" href="dashboard.html"><i class="bi bi-grid-1x2"></i>Dashboard</a>
+<a class="side-link" href="bookings.html"><i class="bi bi-calendar2-check"></i>Bookings<span class="badge rounded-pill">12</span></a>
+<div class="side-label">People</div>
+<a class="side-link" href="customers.html"><i class="bi bi-people"></i>Families</a>
+<a class="side-link" href="caregivers.html"><i class="bi bi-person-badge"></i>Caregivers</a>
+<a class="side-link" href="partners.html"><i class="bi bi-hospital"></i>Partners</a>
+<div class="side-label">Business</div>
+<a class="side-link" href="packages.html"><i class="bi bi-box-seam"></i>Services & plans</a>
+<a class="side-link" href="referrals.html"><i class="bi bi-gift"></i>Referrals & coupons</a>
+<div class="side-label">System</div>
+<a class="side-link" href="#"><i class="bi bi-geo-alt"></i>Zones & hubs</a>
+<a class="side-link" href="#"><i class="bi bi-credit-card"></i>Payments</a>
+<a class="side-link" href="#"><i class="bi bi-journal-text"></i>Content & SOPs</a>
+<a class="side-link" href="#"><i class="bi bi-gear"></i>Settings</a>
+<div class="mt-auto pt-3"><div class="a-card-flat p-3 bg-rose-50 border-0"><div class="fs-xs text-muted-a">Helpline queue</div><div class="fw-semibold">3 waiting · 2 nurses online</div></div></div></aside><div class="offcanvas-backdrop-a"></div>
+<div class="main">
+<header class="topbar">
+  <button class="btn btn-ghost btn-sm sidebar-toggle" data-toggle-sidebar aria-label="Menu"><i class="bi bi-list"></i></button>
+  <div class="search"><i class="bi bi-search"></i><input class="form-control form-control-sm" placeholder="Search families, caregivers, bookings…"></div>
+  <div class="ms-auto d-flex align-items-center gap-2">
+    <span class="chip grey d-none d-md-inline-flex"><i class="bi bi-geo-alt"></i>All zones</span>
+    <button class="btn btn-ghost btn-sm position-relative" aria-label="Notifications"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle p-1 rounded-circle" style="background:#b4537a"></span></button>
+    <div class="d-flex align-items-center gap-2"><span class="avatar bg-rose-50 text-rose" style="width:36px;height:36px">RK</span><span class="fs-sm fw-medium d-none d-sm-inline">Ritika (Ops)</span></div>
+  </div>
+</header>
+<main class="content">
+<div class="page-head"><div><h1>Good morning, Ritika</h1><div class="text-ink-2 fs-sm mt-1">Saturday, 31 Oct 2026 · Chandigarh &amp; Mohali hubs</div></div><div class="d-flex flex-wrap gap-2"><button class="btn btn-ghost btn-sm"><i class="bi bi-download"></i> Export</button><a href="bookings.html" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> New booking</a></div></div><div class="row g-3 mb-3"><div class="col-6 col-xl-3"><div class="a-card kpi h-100"><div class="d-flex justify-content-between align-items-start"><div><div class="l mb-1">Active families</div><div class="v">148</div></div><span class="icon-badge bg-rose-50 text-rose"><i class="bi bi-people"></i></span></div><div class="mt-2"><span class="delta up"><i class="bi bi-arrow-up-short"></i>12%</span> <span class="fs-xs text-muted-a">vs last month</span></div></div></div><div class="col-6 col-xl-3"><div class="a-card kpi h-100"><div class="d-flex justify-content-between align-items-start"><div><div class="l mb-1">Visits today</div><div class="v">62</div></div><span class="icon-badge bg-sage-50 text-sage"><i class="bi bi-calendar2-check"></i></span></div><div class="mt-2"><span class="delta up"><i class="bi bi-arrow-up-short"></i>8%</span> <span class="fs-xs text-muted-a">vs last month</span></div></div></div><div class="col-6 col-xl-3"><div class="a-card kpi h-100"><div class="d-flex justify-content-between align-items-start"><div><div class="l mb-1">On-time visits</div><div class="v">96.4%</div></div><span class="icon-badge bg-sage-50 text-sage"><i class="bi bi-clock-history"></i></span></div><div class="mt-2"><span class="delta up"><i class="bi bi-arrow-up-short"></i>0.8 pt</span> <span class="fs-xs text-muted-a">vs last month</span></div></div></div><div class="col-6 col-xl-3"><div class="a-card kpi h-100"><div class="d-flex justify-content-between align-items-start"><div><div class="l mb-1">Revenue (MTD)</div><div class="v">₹11.8L</div></div><span class="icon-badge bg-rose-50 text-rose"><i class="bi bi-currency-rupee"></i></span></div><div class="mt-2"><span class="delta up"><i class="bi bi-arrow-up-short"></i>18%</span> <span class="fs-xs text-muted-a">vs last month</span></div></div></div></div><div class="row g-3 mb-3">
+  <div class="col-xl-8"><div class="a-card h-100"><div class="a-card-h"><div><h6 class="mb-0">Visits per week</h6><div class="fs-xs text-muted-a">Last 12 weeks · all services</div></div>
+    <div><span class="legend-dot"><span style="background:#b4537a"></span>Completed</span><span class="legend-dot"><span style="background:#5e8c76"></span>Plan-scheduled</span></div></div>
+    <div class="a-card-b"><div style="height:260px"><canvas id="visitsChart" aria-label="Visits per week line chart"></canvas></div></div></div></div>
+  <div class="col-xl-4"><div class="a-card h-100"><div class="a-card-h"><h6 class="mb-0">Families by stage</h6></div><div class="a-card-b">
+    <div class="d-flex justify-content-between fs-sm mb-1"><span>Pregnancy · T1</span><b>18</b></div><div class="progress mb-3"><div class="progress-bar" style="width:24%"></div></div>
+    <div class="d-flex justify-content-between fs-sm mb-1"><span>Pregnancy · T2</span><b>27</b></div><div class="progress mb-3"><div class="progress-bar" style="width:36%"></div></div>
+    <div class="d-flex justify-content-between fs-sm mb-1"><span>Pregnancy · T3</span><b>31</b></div><div class="progress mb-3"><div class="progress-bar" style="width:41%"></div></div>
+    <div class="d-flex justify-content-between fs-sm mb-1"><span>Sutika · 0–40 days</span><b>39</b></div><div class="progress mb-3"><div class="progress-bar sage" style="width:52%"></div></div>
+    <div class="d-flex justify-content-between fs-sm mb-1"><span>Baby · 6 wk–18 m</span><b>33</b></div><div class="progress"><div class="progress-bar sage" style="width:44%"></div></div>
+  </div></div></div>
+</div>
+<div class="row g-3">
+  <div class="col-xl-4"><div class="a-card h-100"><div class="a-card-h"><h6 class="mb-0">Needs attention</h6><span class="chip">4</span></div><div class="a-card-b pt-2">
+    <div class="d-flex gap-3 py-2 border-bottom"><span class="icon-badge" style="background:#fbe9e9;color:#a23b3b;width:36px;height:36px"><i class="bi bi-heart-pulse"></i></span><div class="fs-sm"><b>BP 148/96 logged</b> · Anjali M., week 34<div class="text-muted-a fs-xs">Nurse Kiran · escalated to Dr. partner · 12 min ago</div></div></div>
+    <div class="d-flex gap-3 py-2 border-bottom"><span class="icon-badge bg-gold-50" style="color:#8a6014;width:36px;height:36px"><i class="bi bi-person-x"></i></span><div class="fs-sm"><b>Caregiver unavailable</b> · 11:00 massage, Sec 35<div class="text-muted-a fs-xs">Auto-reassign in progress</div></div></div>
+    <div class="d-flex gap-3 py-2 border-bottom"><span class="icon-badge bg-plum-50" style="color:#4b3a5a;width:36px;height:36px"><i class="bi bi-emoji-frown"></i></span><div class="fs-sm"><b>EPDS score 13</b> · Day 14 mother<div class="text-muted-a fs-xs">Counsellor callback due today</div></div></div>
+    <div class="d-flex gap-3 py-2"><span class="icon-badge bg-sky-50" style="color:#2f5f8f;width:36px;height:36px"><i class="bi bi-chat-dots"></i></span><div class="fs-sm"><b>2 tickets near SLA</b><div class="text-muted-a fs-xs">Refund request · reschedule</div></div></div>
+  </div></div></div>
+  <div class="col-xl-4"><div class="a-card h-100"><div class="a-card-h"><h6 class="mb-0">Revenue by plan (MTD)</h6></div><div class="a-card-b"><div style="height:220px"><canvas id="planChart" aria-label="Revenue by plan bar chart"></canvas></div></div></div></div>
+  <div class="col-xl-4"><div class="a-card h-100"><div class="a-card-h"><h6 class="mb-0">Due dates · next 14 days</h6><a href="customers.html" class="fs-xs">View all</a></div><div class="a-card-b pt-1">
+    <div class="visit"><div class="date"><b>02</b><span>Nov</span></div><div class="fs-sm flex-grow-1"><b>Simran K.</b><div class="text-muted-a fs-xs">Mohali Ph 7 · Sampoorna</div></div><span class="chip sage">Japa matched</span></div>
+    <div class="visit"><div class="date"><b>05</b><span>Nov</span></div><div class="fs-sm flex-grow-1"><b>Meenal G.</b><div class="text-muted-a fs-xs">Sector 21 · Sutika pre-booked</div></div><span class="chip gold">Meet pending</span></div>
+    <div class="visit"><div class="date"><b>09</b><span>Nov</span></div><div class="fs-sm flex-grow-1"><b>Harleen S.</b><div class="text-muted-a fs-xs">Sector 44 · Garbh</div></div><span class="chip">Upsell Sutika</span></div>
+    <div class="visit"><div class="date"><b>12</b><span>Nov</span></div><div class="fs-sm flex-grow-1"><b>Pooja R.</b><div class="text-muted-a fs-xs">Mohali Sec 70 · Sampoorna</div></div><span class="chip sage">Ready</span></div>
+  </div></div></div>
+</div>
+</main>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script><script>
+Chart.defaults.font.family='Inter, system-ui, sans-serif';Chart.defaults.color='#8a8191';
+const grid={color:'#f0eaec'};
+new Chart(document.getElementById('visitsChart'),{type:'line',data:{labels:['W33','W34','W35','W36','W37','W38','W39','W40','W41','W42','W43','W44'],
+datasets:[{label:'Completed',data:[148,162,171,180,196,205,219,226,240,252,268,281],borderColor:'#b4537a',backgroundColor:'#b4537a',borderWidth:2,pointRadius:0,pointHoverRadius:5,tension:.35},
+{label:'Plan-scheduled',data:[96,104,118,121,133,141,150,158,170,177,190,204],borderColor:'#5e8c76',backgroundColor:'#5e8c76',borderWidth:2,pointRadius:0,pointHoverRadius:5,tension:.35}]},
+options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'#2f2438',padding:10,cornerRadius:8}},scales:{x:{grid:{display:false}},y:{grid,border:{display:false},beginAtZero:true}}}});
+new Chart(document.getElementById('planChart'),{type:'bar',data:{labels:['Sampoorna','Pehla Saal','Navjaat 3','Sutika','Garbh','À la carte'],
+datasets:[{label:'₹ lakh',data:[3.5,1.5,2.1,2.4,1.0,1.3],backgroundColor:'#b4537a',borderRadius:4,barThickness:14}]},
+options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#2f2438',callbacks:{label:c=>'₹'+c.raw+' lakh'}}},scales:{x:{grid,border:{display:false}},y:{grid:{display:false}}}}});
+</script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

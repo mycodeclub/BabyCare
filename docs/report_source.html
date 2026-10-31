@@ -1,0 +1,1116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aanchal — Project Plan</title>
+<style>
+:root{
+  --ink:#2f2438; --ink2:#5b5164; --muted:#8a8191; --line:#e9e1e4;
+  --rose:#b4537a; --rose-d:#8e3b5f; --blush:#f7e6ec; --blush2:#fbf2f5;
+  --sage:#5e8c76; --sage-l:#e6f0ea; --sand:#fbf7f3; --gold:#c08a2e; --gold-l:#f8eedb;
+  --plum:#4b3a5a; --sky:#4a7fb5; --sky-l:#e5eef7;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,"DejaVu Sans",sans-serif;color:var(--ink);font-size:10pt;line-height:1.5;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:18mm 17mm 16mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;background:#fff}
+.page:last-child{page-break-after:auto}
+h1,h2,h3{font-family:Lora,Georgia,serif;font-weight:600;color:var(--ink);margin:0}
+h2{font-size:21pt;line-height:1.2;margin-bottom:3mm}
+h3{font-size:12.5pt;margin:0 0 2mm}
+h4{font-size:10pt;margin:0 0 1.5mm;font-weight:600}
+p{margin:0 0 2.5mm}
+.eyebrow{font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:2mm}
+.lead{font-size:11pt;color:var(--ink2);max-width:160mm;margin-bottom:6mm}
+.small{font-size:8.5pt;color:var(--ink2)}
+.tiny{font-size:7.5pt;color:var(--muted)}
+.foot{position:absolute;left:17mm;right:17mm;bottom:9mm;display:flex;justify-content:space-between;font-size:7.5pt;color:var(--muted);border-top:1px solid var(--line);padding-top:2mm}
+.grid{display:grid;gap:4mm}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{border:1px solid var(--line);border-radius:3mm;padding:4mm;background:#fff}
+.card.tint{background:var(--sand);border-color:#f0e7df}
+.card.rose{background:var(--blush2);border-color:#f1d9e2}
+.card.sage{background:var(--sage-l);border-color:#d5e5db}
+.card.gold{background:var(--gold-l);border-color:#efdfbf}
+.card.sky{background:var(--sky-l);border-color:#d3e1ef}
+.stat{font-family:Lora,serif;font-size:24pt;font-weight:600;line-height:1;color:var(--rose-d)}
+.stat-l{font-size:8.5pt;color:var(--ink2);margin-top:1.5mm}
+ul{margin:0;padding-left:4.5mm}li{margin-bottom:1mm}
+ul.tight li{margin-bottom:.4mm}
+.pill{display:inline-block;font-size:7.5pt;padding:.6mm 2.2mm;border-radius:10mm;background:var(--blush);color:var(--rose-d);font-weight:600;margin:0 1mm 1mm 0}
+.pill.sage{background:var(--sage-l);color:#3f6b56}.pill.gold{background:var(--gold-l);color:#8a6014}.pill.sky{background:var(--sky-l);color:#2f5f8f}.pill.plum{background:#ece6f1;color:var(--plum)}
+table{width:100%;border-collapse:collapse;font-size:8.6pt}
+th{text-align:left;font-weight:600;color:var(--ink2);font-size:7.8pt;text-transform:uppercase;letter-spacing:.05em;border-bottom:1.5px solid var(--ink);padding:2mm 2mm}
+td{border-bottom:1px solid var(--line);padding:2mm;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.y{color:var(--sage);font-weight:700}.n{color:#c9bfc5}.p{color:var(--gold);font-weight:700}
+.ours td{background:var(--blush2)}
+.callout{border-left:3px solid var(--rose);padding:2.5mm 4mm;background:var(--blush2);border-radius:0 2mm 2mm 0;font-size:9.5pt}
+.callout.sage{border-color:var(--sage);background:var(--sage-l)}
+.num{font-variant-numeric:tabular-nums}
+/* cover */
+.cover{padding:0;background:var(--sand)}
+.cover .art{position:absolute;right:-30mm;top:-20mm;width:170mm;height:170mm;border-radius:50%;background:radial-gradient(circle at 40% 40%,#f3d3df 0,#f7e6ec 55%,transparent 56%)}
+.cover .art2{position:absolute;right:30mm;top:95mm;width:70mm;height:70mm;border-radius:50%;background:#e2eee7}
+.cover .inner{position:absolute;left:20mm;right:20mm;bottom:28mm}
+.cover h1{font-size:44pt;line-height:1.05;margin:4mm 0 5mm;font-weight:600}
+.brandmark{display:flex;align-items:center;gap:3mm;position:absolute;top:20mm;left:20mm;font-family:Lora,serif;font-size:16pt;font-weight:600}
+.logo{width:11mm;height:11mm}
+/* journey */
+.stage{display:grid;grid-template-columns:30mm 1fr;gap:4mm;margin-bottom:3.2mm;break-inside:avoid}
+.stage .when{border-radius:2.5mm;padding:3mm;color:#fff;font-weight:600;font-size:9pt;line-height:1.25}
+.stage .when b{display:block;font-family:Lora,serif;font-size:13pt;margin-bottom:1mm}
+.stage .what{border:1px solid var(--line);border-radius:2.5mm;padding:3mm 3.5mm;font-size:8.6pt}
+.stage .what .cols{display:grid;grid-template-columns:1fr 1fr;gap:1mm 5mm}
+.stage .what ul{padding-left:4mm}
+.stage .what li{margin-bottom:.5mm}
+.tag{font-size:7pt;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:1mm 0 .5mm}
+/* flow */
+.flow{display:flex;align-items:stretch;gap:0}
+.flow .step{flex:1;background:var(--sand);border:1px solid #efe5dc;border-radius:2.5mm;padding:3mm;font-size:8.3pt;position:relative}
+.flow .arrow{width:6mm;display:flex;align-items:center;justify-content:center;color:var(--rose);font-size:13pt}
+.step b{display:block;font-size:9pt;margin-bottom:.8mm}
+.pkg{border-radius:3mm;padding:4mm;border:1px solid var(--line);position:relative}
+.pkg .price{font-family:Lora,serif;font-size:17pt;font-weight:600;color:var(--ink)}
+.pkg.feat{border:1.5px solid var(--rose);background:var(--blush2)}
+.ribbon{position:absolute;top:-2.6mm;right:4mm;background:var(--rose);color:#fff;font-size:7pt;font-weight:700;padding:.6mm 2.5mm;border-radius:2mm;letter-spacing:.05em}
+.toc a{color:inherit;text-decoration:none}
+.toc .row{display:flex;justify-content:space-between;border-bottom:1px dotted #d9cfd4;padding:2.1mm 0;font-size:10.5pt}
+.toc .row span:first-child b{color:var(--rose);font-family:Lora,serif;margin-right:3mm}
+svg text{font-family:Inter,sans-serif}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <div class="art"></div><div class="art2"></div>
+  <div class="brandmark">
+    <svg class="logo" viewBox="0 0 40 40"><path d="M20 35C9 27 4 20 4 13a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 7-5 14-16 22Z" fill="#b4537a"/><circle cx="20" cy="17" r="5" fill="#fbf7f3"/></svg>
+    Aanchal
+  </div>
+  <div class="inner">
+    <div class="eyebrow">Project plan &amp; market study · Phase 1</div>
+    <h1>Complete care for<br>mother &amp; baby —<br>from first heartbeat<br>to first steps.</h1>
+    <p class="lead" style="margin-bottom:10mm">A pregnancy-to-18-months home-care platform for the Chandigarh Tricity: verified daai-maa care, in-house nurses, partner doctors, flexible plans.</p>
+    <div style="display:flex;gap:10mm;font-size:9pt;color:var(--ink2)">
+      <div><div class="tiny">PREPARED FOR</div><b>Client review</b></div>
+      <div><div class="tiny">LAUNCH MARKET</div><b>Chandigarh · Mohali · Panchkula</b></div>
+      <div><div class="tiny">DATE</div><b>31 October 2026</b></div>
+      <div><div class="tiny">VERSION</div><b>1.0 — Draft</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 CONTENTS + SUMMARY -->
+<section class="page">
+  <div class="eyebrow">At a glance</div>
+  <h2>Executive summary</h2>
+  <p class="lead">Indian families still rely on word-of-mouth for the most important 18 months of their lives. Pregnancy care is scattered across doctor visits, WhatsApp forwards and relatives' advice; after delivery, an unverified daai or japa maid is hired informally. <b>Aanchal</b> brings all of it into one trusted, app-led service.</p>
+  <div class="grid g4" style="margin-bottom:5mm">
+    <div class="card rose"><div class="stat">~23M</div><div class="stat-l">births a year in India<sup>[4]</sup></div></div>
+    <div class="card rose"><div class="stat">&lt;48h</div><div class="stat-l">typical hospital stay after delivery — the 40-day recovery is uncovered<sup>[4]</sup></div></div>
+    <div class="card rose"><div class="stat">₹15–35k</div><div class="stat-l">per month paid to informal jaapa-walis, no standards<sup>[4]</sup></div></div>
+    <div class="card rose"><div class="stat">~22%</div><div class="stat-l">pooled postpartum-depression rate, rarely screened<sup>[4]</sup></div></div>
+  </div>
+  <div class="grid g2">
+    <div>
+      <h3>The opportunity</h3>
+      <ul>
+        <li>No Tricity provider covers <b>pregnancy → delivery → 18 months</b> end-to-end.</li>
+        <li>National home-health brands (e.g. Apollo HomeCare) do not list Chandigarh; local agencies publish no prices and have no app.</li>
+        <li>Traditional baby massage is in high demand but delivered by untrained, unverified individuals.</li>
+        <li>Pronto has proved that verified, trained, app-dispatched home workers scale fast (≈18k bookings/day within ~18 months)<sup>[2]</sup>.</li>
+      </ul>
+      <h3 style="margin-top:4mm">What we offer</h3>
+      <ul>
+        <li>Stage-wise care from month 1 of pregnancy: nurse visits, diet, scans &amp; appointments, yoga, classes.</li>
+        <li>Post-delivery: daai-maa baby &amp; mother massage, first bath, japa shifts, lactation, physio.</li>
+        <li>Baby 0–18 months: vaccines, growth, weaning, sleep, paediatric access.</li>
+        <li>Full plans (9/12/18 months) <i>and</i> small packs (40 days, 3 months, single visits).</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Operating model</h3>
+      <div class="callout" style="margin-bottom:3mm"><b>Hybrid.</b> Core caregivers (daai-maa, japa, GNM/ANM nurses) are <b>in-house</b>, trained and verified. Doctors, hospitals, labs and physios are <b>partners</b> on commission. Nurse visits go to in-house staff first.</div>
+      <h3>Technology</h3>
+      <p class="small">.NET MVC admin panel + ASP.NET Core Web API · EF Core · SQL Server · React Native Android app (customer now, caregiver later).</p>
+      <h3>Roadmap</h3>
+      <p class="small">Plan &amp; templates (now) → API + admin (10 wks) → customer app (10 wks) → 3-month pilot in 2 Tricity zones → caregiver app &amp; Punjab expansion.</p>
+      <h3>Brand name options</h3>
+      <p class="small" style="margin-bottom:1mm"><span class="pill">Aanchal</span><span class="pill plum">MaaSathi</span><span class="pill sage">Navya Care</span></p>
+      <p class="tiny">"Aanchal" (a mother's protective embrace) is used as the working name. All three need trademark &amp; domain checks.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>02</span></div>
+</section>
+
+<!-- 3 CONTENTS -->
+<section class="page">
+  <div class="eyebrow">Contents</div>
+  <h2>What's inside</h2>
+  <div class="toc" style="margin-top:6mm">
+    <div class="row"><span><b>01</b>Executive summary</span><span>02</span></div>
+    <div class="row"><span><b>02</b>Market gap — India</span><span>04</span></div>
+    <div class="row"><span><b>03</b>Chandigarh Tricity market analysis</span><span>05</span></div>
+    <div class="row"><span><b>04</b>Competitor comparison</span><span>06</span></div>
+    <div class="row"><span><b>05</b>Pronto business-flow study &amp; what we adapt</span><span>07</span></div>
+    <div class="row"><span><b>06</b>Care journey — month-by-month services (3 pages)</span><span>08</span></div>
+    <div class="row"><span><b>07</b>Add-on services in detail (2 pages)</span><span>11</span></div>
+    <div class="row"><span><b>08</b>Nuclear &amp; joint families</span><span>13</span></div>
+    <div class="row"><span><b>09</b>Plans, packs &amp; indicative pricing</span><span>14</span></div>
+    <div class="row"><span><b>10</b>Referral &amp; growth engine</span><span>15</span></div>
+    <div class="row"><span><b>11</b>Platform: users, roles &amp; flows</span><span>16</span></div>
+    <div class="row"><span><b>12</b>Product modules</span><span>17</span></div>
+    <div class="row"><span><b>13</b>Technical architecture &amp; data model</span><span>18</span></div>
+    <div class="row"><span><b>14</b>Caregiver operations, training &amp; quality</span><span>19</span></div>
+    <div class="row"><span><b>15</b>Roadmap &amp; delivery plan</span><span>20</span></div>
+    <div class="row"><span><b>16</b>Business model &amp; projections (assumptions)</span><span>21</span></div>
+    <div class="row"><span><b>17</b>KPIs &amp; risk register</span><span>22</span></div>
+    <div class="row"><span><b>18</b>Next steps &amp; sources</span><span>23</span></div>
+  </div>
+  <div class="callout sage" style="margin-top:10mm">Figures marked <b>[n]</b> come from the cited sources on the last page. Market sizing, pricing and projections are <b>planning assumptions</b> to be validated during the pilot, not audited data.</div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>03</span></div>
+</section>
+
+<!-- 4 MARKET GAP -->
+<section class="page">
+  <div class="eyebrow">02 · Market gap</div>
+  <h2>India has the tradition, but no industry</h2>
+  <p class="lead">The 40-day <i>jaapa</i> (Ayurveda's <i>sutika paricharya</i>) is one of the world's oldest postpartum traditions. Yet there is no licensing category, no standard training and no insurance for it — while China, Taiwan and Korea have turned the same tradition into regulated industries.<sup>[4]</sup></p>
+  <div class="grid g2" style="margin-bottom:5mm">
+    <div class="card">
+      <h3>Where families struggle today</h3>
+      <svg viewBox="0 0 330 190" width="100%">
+        <g font-size="9" fill="#2f2438">
+          <text x="0" y="18">Pregnancy guidance scattered</text>
+          <text x="0" y="50">No verified daai / japa</text>
+          <text x="0" y="82">Hospital stay &lt; 48h</text>
+          <text x="0" y="114">Baby-health info overload</text>
+          <text x="0" y="146">Mother's recovery ignored</text>
+          <text x="0" y="178">Nuclear families alone</text>
+        </g>
+        <g>
+          <rect x="140" y="8" width="170" height="14" rx="2" fill="#b4537a"/>
+          <rect x="140" y="40" width="182" height="14" rx="2" fill="#b4537a"/>
+          <rect x="140" y="72" width="150" height="14" rx="2" fill="#b4537a"/>
+          <rect x="140" y="104" width="128" height="14" rx="2" fill="#d48aa7"/>
+          <rect x="140" y="136" width="140" height="14" rx="2" fill="#d48aa7"/>
+          <rect x="140" y="168" width="160" height="14" rx="2" fill="#d48aa7"/>
+        </g>
+      </svg>
+      <p class="tiny">Qualitative severity ranking from desk research — to be validated with 50+ family interviews in Tricity (see Next steps).</p>
+    </div>
+    <div class="card tint">
+      <h3>Why now</h3>
+      <ul>
+        <li><b>Proven model:</b> Pronto, Snabbit and Urban Company InstaHelp show that families will book verified home workers through an app; Pronto grew from 1 hub to ≈18k bookings a day.<sup>[2][3]</sup></li>
+        <li><b>Nuclear families</b> are growing; grandparents often live in another city or abroad.</li>
+        <li><b>Higher spend per child:</b> families with one or two children invest in quality care.</li>
+        <li><b>Data-protection clarity:</b> the DPDP Act 2023 sets rules for consent-based health data.</li>
+        <li><b>Hospitals want continuity:</b> maternity hospitals lose contact after discharge — partners for referral.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>The care gap we fill</h3>
+  <div class="flow" style="margin-top:2mm">
+    <div class="step"><b>Pregnancy</b>Doctor visits every 4 weeks; nothing in between at home.</div><div class="arrow">→</div>
+    <div class="step"><b>Delivery</b>1–3 days in hospital, then discharged.</div><div class="arrow">→</div>
+    <div class="step" style="background:var(--blush);border-color:#efcbd8"><b>Day 3 – 40</b>Biggest need, least support. Informal maids, no checks.</div><div class="arrow">→</div>
+    <div class="step"><b>Months 2–18</b>Vaccines &amp; milestones tracked on paper or not at all.</div>
+  </div>
+  <div class="callout" style="margin-top:5mm"><b>Aanchal's promise:</b> one care manager, one app and one trained team for the whole journey, so no stage is left uncovered.</div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>04</span></div>
+</section>
+
+<!-- 5 TRICITY -->
+<section class="page">
+  <div class="eyebrow">03 · Launch market</div>
+  <h2>Chandigarh Tricity</h2>
+  <p class="lead">A planned, high-income, compact metro region with strong private maternity hospitals and a large catchment from Punjab, Haryana and Himachal — ideal for a hub-based home-care pilot.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Service zones (hub plan)</h3>
+      <svg viewBox="0 0 330 230" width="100%">
+        <rect x="0" y="0" width="330" height="230" rx="8" fill="#fbf7f3"/>
+        <!-- zones -->
+        <circle cx="130" cy="95" r="58" fill="#f7e6ec" stroke="#b4537a" stroke-width="1.5"/>
+        <circle cx="235" cy="70" r="44" fill="#e6f0ea" stroke="#5e8c76" stroke-width="1.5"/>
+        <circle cx="90" cy="175" r="44" fill="#e5eef7" stroke="#4a7fb5" stroke-width="1.5"/>
+        <circle cx="210" cy="175" r="34" fill="#f8eedb" stroke="#c08a2e" stroke-width="1.5"/>
+        <circle cx="30" cy="120" r="22" fill="#ece6f1" stroke="#4b3a5a" stroke-width="1.2"/>
+        <g font-size="10" font-weight="600" fill="#2f2438" text-anchor="middle">
+          <text x="130" y="92">Chandigarh</text><text x="130" y="105" font-size="8" font-weight="400">Hub 1 · Pilot</text>
+          <text x="235" y="67">Panchkula</text><text x="235" y="80" font-size="8" font-weight="400">Hub 3</text>
+          <text x="90" y="172">Mohali</text><text x="90" y="185" font-size="8" font-weight="400">Hub 2 · Pilot</text>
+          <text x="210" y="172">Zirakpur</text><text x="210" y="185" font-size="8" font-weight="400">Hub 4</text>
+          <text x="30" y="118" font-size="8">Kharar</text><text x="30" y="128" font-size="7" font-weight="400">later</text>
+        </g>
+      </svg>
+      <p class="tiny">Schematic, not to scale. Each hub = a caregiver base + nurse desk with a ~30-minute visit radius.</p>
+    </div>
+    <div>
+      <div class="grid g2" style="margin-bottom:4mm">
+        <div class="card sage"><div class="stat" style="color:#3f6b56">~2.8M</div><div class="stat-l">Tricity population incl. Zirakpur/Kharar (estimate)</div></div>
+        <div class="card sage"><div class="stat" style="color:#3f6b56">~39k</div><div class="stat-l">births/year, est. at ~14 per 1,000 people</div></div>
+        <div class="card sage"><div class="stat" style="color:#3f6b56">~13.6k</div><div class="stat-l">addressable urban mid/high-income families per year (35%)</div></div>
+        <div class="card sage"><div class="stat" style="color:#3f6b56">~1,100</div><div class="stat-l">families/yr target by Year 3 (8% share)</div></div>
+      </div>
+      <p class="tiny">Estimates for planning only. Validate with Census/SRS data and hospital delivery volumes before investment decisions.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:5mm">Existing ecosystem in the Tricity</h3>
+  <table>
+    <tr><th>Type</th><th>Examples</th><th>What they do</th><th>Our relationship</th></tr>
+    <tr><td>Maternity hospitals</td><td>Cloudnine (Chandigarh, Panchkula), Motherhood (Mohali), PGIMER, GMCH-32, private nursing homes</td><td>Antenatal OPD, delivery, classes</td><td><span class="pill sage">Partner &amp; referral</span></td></tr>
+    <tr><td>Home-care agencies</td><td>Max@Home (Panchkula pages), local nursing bureaus</td><td>Japa maids, nursing; prices on request<sup>[5]</sup></td><td><span class="pill">Compete</span></td></tr>
+    <tr><td>Beauty &amp; spa apps</td><td>Urban Company (Chandigarh spa)</td><td>Adult massage at home; no newborn care</td><td><span class="pill">Compete (adjacent)</span></td></tr>
+    <tr><td>Informal daai / maalishwali</td><td>Word-of-mouth individuals</td><td>Baby &amp; mother massage</td><td><span class="pill gold">Recruit, train, certify</span></td></tr>
+    <tr><td>Diagnostics</td><td>Chain &amp; local labs</td><td>Home sample collection</td><td><span class="pill sage">Partner</span></td></tr>
+  </table>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>05</span></div>
+</section>
+
+<!-- 6 COMPETITORS -->
+<section class="page">
+  <div class="eyebrow">04 · Competition</div>
+  <h2>How we compare</h2>
+  <p class="lead">Every competitor covers one slice. Nobody connects pregnancy, delivery and the baby's first 18 months with both traditional and clinical care.</p>
+  <table style="font-size:8.4pt">
+    <tr><th style="width:24%">Capability</th><th>Aanchal</th><th>Apollo HomeCare</th><th>Max@Home</th><th>Cloudnine / Motherhood</th><th>Urban Company</th><th>Mylo / Healofy</th><th>Local daai</th></tr>
+    <tr><td>Present in Tricity</td><td class="y">●</td><td class="n">○<sup>[6]</sup></td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="p">App</td><td class="y">●</td></tr>
+    <tr><td>Pregnancy home visits</td><td class="y">●</td><td class="p">◐</td><td class="p">◐</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="n">○</td></tr>
+    <tr><td>Personal diet plans</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="p">◐</td><td class="n">○</td><td class="p">◐</td><td class="n">○</td></tr>
+    <tr><td>Doctor / scan booking</td><td class="y">●</td><td class="p">◐</td><td class="n">○</td><td class="y">●</td><td class="n">○</td><td class="p">◐</td><td class="n">○</td></tr>
+    <tr><td>Trained traditional baby massage</td><td class="y">●</td><td class="p">Guide</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="p">Untrained</td></tr>
+    <tr><td>Baby's first bath at home</td><td class="y">●</td><td class="y">●</td><td class="p">◐</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="y">●</td></tr>
+    <tr><td>Japa / night caregiver</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="p">◐</td></tr>
+    <tr><td>Verified &amp; insured staff</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">—</td><td class="n">○</td></tr>
+    <tr><td>Transparent prices in app</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="p">◐</td><td class="y">●</td><td class="y">●</td><td class="n">○</td></tr>
+    <tr><td>Flexible packs (40d / 3m / 18m)</td><td class="y">●</td><td class="p">◐</td><td class="p">◐</td><td class="p">◐</td><td class="n">○</td><td class="n">○</td><td class="n">○</td></tr>
+    <tr><td>Baby tracker (vaccines, growth)</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="p">◐</td><td class="n">○</td><td class="y">●</td><td class="n">○</td></tr>
+    <tr><td>Postpartum depression screening</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="p">◐</td><td class="n">○</td><td class="n">○</td><td class="n">○</td></tr>
+    <tr><td>Family roles (joint family, NRI)</td><td class="y">●</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="n">○</td><td class="n">○</td></tr>
+  </table>
+  <p class="tiny" style="margin-top:2mm">● full · ◐ partial · ○ not offered / not found publicly. Based on public web pages as of Oct 2026<sup>[5][6]</sup>; competitor offerings may change.</p>
+  <div class="grid g3" style="margin-top:4mm">
+    <div class="card rose"><h4>Our wedge</h4><p class="small">Certified daai-maa massage + first bath, the most emotional and most-asked-for service, sold as a ₹499 entry product.</p></div>
+    <div class="card sage"><h4>Our moat</h4><p class="small">Trained, verified, in-house caregivers, plus hospital and doctor partnerships that refer patients at discharge.</p></div>
+    <div class="card gold"><h4>Our retention</h4><p class="small">An 18-month journey with trackers and care credits. One customer stays ~18× longer than a one-off spa booking.</p></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>06</span></div>
+</section>
+
+<!-- 7 PRONTO -->
+<section class="page">
+  <div class="eyebrow">05 · Reference study</div>
+  <h2>Learning from Pronto's business flow</h2>
+  <p class="lead">Pronto (house help in ~10 minutes) is used only as a reference for <b>operating model and UX ideas</b>. No design, text or assets are copied.</p>
+  <div class="grid g3" style="margin-bottom:5mm">
+    <div class="card"><div class="stat">≈18k</div><div class="stat-l">bookings a day, up from ~1k a year earlier<sup>[2]</sup></div></div>
+    <div class="card"><div class="stat">4.5★</div><div class="stat-l">App Store rating from ~61k ratings<sup>[3]</sup></div></div>
+    <div class="card"><div class="stat">50 / 300</div><div class="stat-l">candidates pass screening; 5-day training on 14 services<sup>[1]</sup></div></div>
+  </div>
+  <h3>Pronto's three-sided system</h3>
+  <div class="flow" style="margin:2mm 0 5mm">
+    <div class="step"><b>Customer app</b>Choose services → Instant / Scheduled / Recurring → live price → pay in app (UPI, card, wallet) → track the Pro → rate.</div><div class="arrow">⇄</div>
+    <div class="step"><b>Ops console</b>Hub polygons, auto-matching, reassign if a Pro can't attend, SOS line, hub managers, refresher training.</div><div class="arrow">⇄</div>
+    <div class="step"><b>Professional app</b>Guaranteed shifts, job queue, check-in, earnings, insurance. Verified with Aadhaar/PAN + police clearance.</div>
+  </div>
+  <table>
+    <tr><th style="width:30%">Pronto pattern</th><th>How Aanchal adapts it</th></tr>
+    <tr><td>Micro-hubs with a 10-minute polygon</td><td>4 Tricity hubs with a ~30-min radius. Care is planned, not instant, except the SOS / nurse-on-call line.</td></tr>
+    <tr><td>Instant / Scheduled / Recurring booking</td><td>Single visit / scheduled / <b>plan-driven auto-schedule</b> (e.g. daily massage for 40 days, generated from the due date).</td></tr>
+    <tr><td>Pronto Pass (minutes, savings, priority)</td><td><b>Care Credits</b> wallet: plans load credits; any service can be redeemed against them. Priority for plan members.</td></tr>
+    <tr><td>Strict screening + 5-day training</td><td>3-tier academy: Daai-maa (massage, bath, hygiene, red flags), Japa (newborn + mother care), Nurse (clinical SOPs).</td></tr>
+    <tr><td>Auto-reassign when a Pro is unavailable</td><td>Same. Plus a <b>primary caregiver</b> assigned per family for continuity; a backup is introduced in week 1.</td></tr>
+    <tr><td>Cashless, no hidden fees</td><td>Same. Plus EMI for large plans and <b>gifting</b> (baby shower / godh bharai).</td></tr>
+    <tr><td>Reported issues: late visits, slow support, refunds<sup>[3]</sup></td><td>SLA timers in admin, a single care-manager per family, WhatsApp support, auto-credit on missed visits.</td></tr>
+  </table>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>07</span></div>
+</section>
+
+<!-- 8 JOURNEY 1 -->
+<section class="page">
+  <div class="eyebrow">06 · Care journey · Pregnancy (1/3)</div>
+  <h2>Month-by-month services</h2>
+  <p class="small" style="margin-bottom:4mm">Care starts <b>as soon as the mother knows she is pregnant</b> — month 1 or later. A mother can join at any stage; the app builds her plan from her due date. All tests and vaccines follow her doctor's advice; we schedule, remind and coordinate.</p>
+
+  <div class="stage">
+    <div class="when" style="background:#c07a96"><b>Month 1–2</b>Weeks 1–8<br>"Just found out"</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>Welcome call from a care manager + app onboarding (LMP, history, family)</li>
+        <li>In-house nurse home visit: BP, weight, Hb, sugar, risk screening</li>
+        <li>First gynaecologist appointment with a partner doctor</li>
+        <li>Home sample collection for first-trimester blood tests (as prescribed)</li>
+        <li>Dating / viability scan booking (6–9 weeks)</li></ul></div>
+      <div><div class="tag">Diet, rest &amp; wellbeing</div><ul>
+        <li>Personal diet plan: nausea-friendly, folate- &amp; iron-rich foods, veg / Jain / Punjabi menus</li>
+        <li>Supplement reminders (as prescribed)</li>
+        <li>Sleep &amp; rest routine, what to avoid</li>
+        <li>Emotional check-in; "Welcome to motherhood" kit</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#b4537a"><b>Month 3</b>Weeks 9–13<br>End of trimester 1</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>NT scan + double-marker scheduling (11–14 weeks) at partner labs</li>
+        <li>Monthly nurse visit and vitals log in the app</li>
+        <li>Td/TT vaccine reminder as per the doctor</li>
+        <li>Thyroid and other follow-up tests if advised</li></ul></div>
+      <div><div class="tag">Diet, exercise &amp; sleep</div><ul>
+        <li>Trimester-1 diet review by dietitian</li>
+        <li>Gentle walking plan (doctor-cleared)</li>
+        <li>Sleep posture guidance; hydration tracker</li>
+        <li>Family session: how relatives can support</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#8e3b5f"><b>Month 4–6</b>Weeks 14–27<br>Trimester 2</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>Monthly nurse home visits (BP, weight, Hb, swelling, fundal check)</li>
+        <li>Anomaly (level-II) scan booking, 18–20 weeks</li>
+        <li>Glucose tolerance test (OGTT), 24–28 weeks, home collection</li>
+        <li>Quadruple marker if advised; partner dental check-up</li>
+        <li>Monthly gynae appointment reminders &amp; reports vault</li></ul></div>
+      <div><div class="tag">Diet, exercise, sleep, learning</div><ul>
+        <li>Iron- &amp; calcium-rich diet, gestational-diabetes diet if needed</li>
+        <li>Prenatal yoga 2×/week (home or online)</li>
+        <li>Left-side sleep coaching, back-pain care</li>
+        <li>Childbirth class series begins (mother + partner)</li>
+        <li>Add-ons: garbh sanskar, maternity photoshoot, godh bharai planning</li></ul></div>
+    </div></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>08</span></div>
+</section>
+
+<!-- 9 JOURNEY 2 -->
+<section class="page">
+  <div class="eyebrow">06 · Care journey · Pre-delivery (2/3)</div>
+  <h2>Trimester 3 &amp; delivery</h2>
+  <p class="small" style="margin-bottom:4mm">Visit frequency increases as the due date approaches. The care manager prepares the home, the family and the post-delivery caregiver well before labour.</p>
+
+  <div class="stage">
+    <div class="when" style="background:#5e8c76"><b>Month 7</b>Weeks 28–31</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>Nurse visits every 2 weeks</li>
+        <li>Growth scan booking if advised; Tdap reminder as per the doctor</li>
+        <li>Daily kick-count tracker starts in the app, with alerts</li></ul></div>
+      <div><div class="tag">Preparation</div><ul>
+        <li>Breastfeeding class; birth-plan worksheet</li>
+        <li>Prenatal physio for back &amp; pelvic pain</li>
+        <li>Hospital tour coordination with a partner hospital</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#4a7a64"><b>Month 8</b>Weeks 32–35</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>Nurse visits every 2 weeks; NST / Doppler coordination if advised</li>
+        <li>Diet: smaller frequent meals, heartburn care</li>
+        <li>Breathing &amp; relaxation sessions for labour</li></ul></div>
+      <div><div class="tag">Home &amp; family readiness</div><ul>
+        <li>Meet-and-match with the post-delivery japa / daai-maa</li>
+        <li>Nursery setup &amp; safe-sleep guidance; home sanitisation booking</li>
+        <li>Elder orientation for joint families (traditions + safety)</li>
+        <li>Insurance cashless pre-authorisation help</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#3c6553"><b>Month 9</b>Weeks 36–40<br>Pre-delivery</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Health &amp; checkups</div><ul>
+        <li>Weekly nurse visits; labour-sign education</li>
+        <li>24×7 nurse helpline; SOS button in the app</li>
+        <li>Light, energy-rich diet plan</li></ul></div>
+      <div><div class="tag">Delivery logistics</div><ul>
+        <li>Hospital-bag checklist for mother &amp; baby</li>
+        <li>On-call cab / ambulance tie-up</li>
+        <li>Caregiver on standby from week 37; family contact tree</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#c08a2e"><b>Delivery</b>Hospital stay</div>
+    <div class="what"><div class="cols">
+      <div><ul>
+        <li>Hospital liaison from Aanchal for family updates (incl. relatives abroad)</li>
+        <li>Birth registration &amp; document guidance</li></ul></div>
+      <div><ul>
+        <li>Home readied before discharge: sanitised room, baby corner</li>
+        <li>Caregiver arrives on discharge day; first nurse visit within 24h</li></ul></div>
+    </div></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>09</span></div>
+</section>
+
+<!-- 10 JOURNEY 3 -->
+<section class="page">
+  <div class="eyebrow">06 · Care journey · Post-delivery (3/3)</div>
+  <h2>Mother &amp; baby, day 1 to month 18</h2>
+  <p class="small" style="margin-bottom:4mm">This is the traditional <i>sutika</i> period, delivered with clinical safeguards. Massage and the first full bath start only after a doctor's clearance; until the cord falls off, the baby gets sponge baths.</p>
+
+  <div class="stage">
+    <div class="when" style="background:#b4537a"><b>Day 1–10</b>At home</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Baby</div><ul>
+        <li>Nurse visit: weight, temperature, jaundice watch, cord care</li>
+        <li>Sponge bath &amp; nail care; feeding &amp; diaper log in the app</li>
+        <li>Birth-dose vaccine record (BCG, OPV-0, Hep-B)</li></ul></div>
+      <div><div class="tag">Mother</div><ul>
+        <li>Stitch / C-section wound care; BP &amp; bleeding check</li>
+        <li>Lactation consultant visit</li>
+        <li>Sutika diet: ajwain water, panjiri, gond laddoo (as tolerated); cook add-on</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#8e3b5f"><b>Day 11–40</b>Sutika period</div>
+    <div class="what"><div class="cols">
+      <div><div class="tag">Baby</div><ul>
+        <li>Daily daai-maa baby massage (traditional oils, trained technique)</li>
+        <li><b>Baby's first full bath</b> by a trained daai-maa</li>
+        <li>Japa caregiver: day, night or 24×7 shifts</li></ul></div>
+      <div><div class="tag">Mother</div><ul>
+        <li>Mother massage after doctor clearance; optional belly binding</li>
+        <li>Postpartum-depression screening (EPDS) at weeks 2 &amp; 6</li>
+        <li>6-week postnatal check-up booking</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#5e8c76"><b>6 wk – 3 m</b>"Navjaat"</div>
+    <div class="what"><div class="cols">
+      <div><ul><li>Vaccines at 6, 10 &amp; 14 weeks: reminders &amp; partner-clinic booking</li><li>Growth chart (WHO), sleep routine, colic support</li><li>Massage moves to 3×/week (pack)</li></ul></div>
+      <div><ul><li>Postnatal physio: pelvic floor, diastasis recti, back</li><li>Return-to-work plan; nanny matching</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#4a7fb5"><b>3 – 6 m</b></div>
+    <div class="what"><div class="cols">
+      <div><ul><li>Tummy-time &amp; milestone coaching; paediatric tele-consults</li></ul></div>
+      <div><ul><li>Weaning readiness &amp; first-foods plan at 5–6 months</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#4b3a5a"><b>6 – 12 m</b></div>
+    <div class="what"><div class="cols">
+      <div><ul><li>Solid-food diet plans by month; 9-month vaccine reminders</li><li>Babyproofing audit at home</li></ul></div>
+      <div><ul><li>Development play sessions; mother's fitness plan</li><li>First-birthday planning add-on</li></ul></div>
+    </div></div>
+  </div>
+
+  <div class="stage">
+    <div class="when" style="background:#c08a2e"><b>12 – 18 m</b>Toddler</div>
+    <div class="what"><div class="cols">
+      <div><ul><li>Toddler nutrition; MMR &amp; booster reminders</li><li>Walking &amp; speech milestone checks</li></ul></div>
+      <div><ul><li>Mundan / naming-ceremony coordination (add-on)</li><li>Sibling-planning &amp; next-pregnancy counselling</li></ul></div>
+    </div></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>10</span></div>
+</section>
+
+<!-- 11 ADD-ONS -->
+<section class="page">
+  <div class="eyebrow">07 · Add-on services (1/2)</div>
+  <h2>Add-ons, in detail</h2>
+  <p class="lead">Add-ons can be bought on their own or redeemed with Care Credits from any plan. Prices are indicative launch prices for the Tricity, excluding GST.</p>
+  <table style="font-size:8.6pt">
+    <tr><th style="width:23%">Add-on</th><th style="width:13%">Stage</th><th>What's included</th><th style="width:12%">Who</th><th style="width:12%" class="num">Indicative ₹</th></tr>
+    <tr><td colspan="5" style="background:var(--blush2);font-weight:600;color:var(--rose-d)">Pregnancy</td></tr>
+    <tr><td>Prenatal yoga at home</td><td>Month 3–9</td><td>60-min trimester-safe session, breathing, posture</td><td>Partner instructor</td><td class="num">799 / session</td></tr>
+    <tr><td>Garbh sanskar program</td><td>Month 4–9</td><td>Music, reading &amp; meditation, 8 sessions (online/home)</td><td>Partner</td><td class="num">3,999</td></tr>
+    <tr><td>Childbirth &amp; parenting class</td><td>Month 6–8</td><td>4 sessions for couple: labour, breastfeeding, newborn handling</td><td>In-house nurse</td><td class="num">2,999</td></tr>
+    <tr><td>Godh bharai / baby-shower planning</td><td>Month 7–8</td><td>Décor vendor, catering list, gift a care plan</td><td>Partner</td><td class="num">On quote</td></tr>
+    <tr><td>Maternity photoshoot</td><td>Month 7–8</td><td>Home / studio, edited photos</td><td>Partner</td><td class="num">From 4,999</td></tr>
+    <tr><td>Home lab collection</td><td>Any</td><td>Sample pick-up, report in app vault</td><td>Partner lab</td><td class="num">Lab price + 99</td></tr>
+    <tr><td>Gynae tele-consult</td><td>Any</td><td>15-min video consult with partner gynaecologist</td><td>Partner doctor</td><td class="num">499</td></tr>
+    <tr><td colspan="5" style="background:#ece6f1;font-weight:600;color:var(--plum)">Family</td></tr>
+    <tr><td>Parents-abroad update pack</td><td>Any</td><td>Weekly video call with caregiver, photo diary</td><td>Care manager</td><td class="num">999 / month</td></tr>
+    <tr><td>"Dadi-on-call" mentor</td><td>Any</td><td>Experienced mother-mentor on chat/call</td><td>In-house</td><td class="num">1,499 / month</td></tr>
+    <tr><td>Home sanitisation</td><td>Month 9</td><td>Deep-clean of mother &amp; baby room before arrival</td><td>Partner</td><td class="num">1,999</td></tr>
+  
+  </table>
+  <div class="grid g3" style="margin-top:6mm">
+    <div class="card rose"><h4>Bundle logic</h4><p class="small">Every plan includes a credit buffer (≈10%) so families can try add-ons without a new payment.</p></div>
+    <div class="card sage"><h4>Partner add-ons</h4><p class="small">Yoga, photoshoots, labs and events are delivered by vetted partners; Aanchal earns 10–20% commission.</p></div>
+    <div class="card gold"><h4>Gift-able</h4><p class="small">Any add-on can be gifted by relatives, e.g. "10 massages for my daughter-in-law".</p></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>11</span></div>
+</section>
+
+<!-- 11b ADD-ONS -->
+<section class="page">
+  <div class="eyebrow">07 · Add-on services (2/2)</div>
+  <h2>After-delivery add-ons</h2>
+  <p class="lead">These are the most-booked services. Daai-maa massage and the first bath are the entry products that lead families into plans.</p>
+  <table style="font-size:8.6pt">
+    <tr><th style="width:23%">Add-on</th><th style="width:13%">Stage</th><th>What's included</th><th style="width:12%">Who</th><th style="width:12%" class="num">Indicative ₹</th></tr>
+    <tr><td colspan="5" style="background:var(--sage-l);font-weight:600;color:#3f6b56">After delivery — baby</td></tr>
+    <tr><td>Baby massage (daai-maa)</td><td>Day 7+ *</td><td>45-min traditional massage, oil included, hygiene kit</td><td>In-house</td><td class="num">499 · 10× 4,499</td></tr>
+    <tr><td>Baby's first bath</td><td>After cord falls *</td><td>Bath, cord check, nail &amp; hair care, parent coaching</td><td>In-house</td><td class="num">699</td></tr>
+    <tr><td>Night nanny / japa</td><td>0–3 m</td><td>12-hr night shift: feeds support, burping, settling</td><td>In-house</td><td class="num">22,000 / month</td></tr>
+    <tr><td>24×7 live-in japa</td><td>0–3 m</td><td>Mother + baby care, light cooking for mother</td><td>In-house</td><td class="num">32,000 / month</td></tr>
+    <tr><td>Baby photoshoot</td><td>0–12 m</td><td>Newborn / monthly milestone shoot</td><td>Partner</td><td class="num">From 3,999</td></tr>
+    <tr><td>Babyproofing audit</td><td>6–9 m</td><td>Home walk-through, checklist, kit fitting</td><td>In-house</td><td class="num">1,499</td></tr>
+    <tr><td colspan="5" style="background:var(--gold-l);font-weight:600;color:#8a6014">After delivery — mother</td></tr>
+    <tr><td>Mother massage (abhyanga)</td><td>After clearance *</td><td>60-min postnatal massage + optional belly binding</td><td>In-house</td><td class="num">799</td></tr>
+    <tr><td>Lactation consultation</td><td>Day 2+</td><td>Home visit: latch, positions, supply plan</td><td>In-house / partner</td><td class="num">1,199</td></tr>
+    <tr><td>Postnatal physio</td><td>6 wk+</td><td>Pelvic floor, diastasis recti, back care</td><td>Partner physio</td><td class="num">899 / session</td></tr>
+    <tr><td>Sutika cook</td><td>0–40 days</td><td>Traditional postpartum meals, 2 visits/day</td><td>In-house</td><td class="num">12,000 / month</td></tr>
+    <tr><td>Counsellor sessions</td><td>Any</td><td>Video / in-person, triggered by EPDS score or on request</td><td>Partner</td><td class="num">999 / session</td></tr>
+    
+  </table>
+  <p class="tiny" style="margin-top:2mm">* Starts only after paediatrician / gynaecologist clearance.</p>
+  <div class="callout" style="margin-top:5mm"><b>Daai-maa promise:</b> traditional technique your elders trust, done by a trained, police-verified caregiver who uses a sealed hygiene kit, gloves when needed and doctor-approved oils, and knows newborn red flags.</div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>12</span></div>
+</section>
+
+<!-- 12 FAMILIES -->
+<section class="page">
+  <div class="eyebrow">08 · Built for Indian families</div>
+  <h2>Nuclear &amp; joint families</h2>
+  <p class="lead">A mother's care is a family affair. The app gives each family member a role, and services adapt to who is at home.</p>
+  <div class="grid g2" style="margin-bottom:5mm">
+    <div class="card sky">
+      <h3>Nuclear family</h3>
+      <p class="small">Working couple, grandparents in another city or abroad.</p>
+      <ul>
+        <li><b>Night-shift japa</b> so parents can sleep and work</li>
+        <li><b>"Dadi-on-call"</b>: an experienced mentor for everyday doubts</li>
+        <li><b>Remote family dashboard</b>: grandparents see visit logs, photos, milestones</li>
+        <li>Back-to-work plan, trusted nanny matching after month 3</li>
+        <li>Grocery &amp; pharmacy reminders, appointment cab booking</li>
+        <li>Paternity-support tips and a dad checklist</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h3>Joint family</h3>
+      <p class="small">Elders at home with strong traditions and many hands to help.</p>
+      <ul>
+        <li><b>Elder orientation session</b>: keep valued traditions, avoid unsafe ones (e.g. kajal in eyes, honey for newborns)</li>
+        <li>Traditional daai-maa massage that elders recognise, with modern hygiene</li>
+        <li><b>Shared family account</b> with roles: mother, husband, mother-in-law, caregiver</li>
+        <li>Hindi / Punjabi-speaking staff; festival-aware scheduling</li>
+        <li>Ceremony coordination: godh bharai, chhati, naming, mundan</li>
+        <li>Diet plans that fit the family kitchen</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Family roles in the app</h3>
+  <table>
+    <tr><th>Role</th><th>Can see</th><th>Can do</th></tr>
+    <tr><td><b>Mother</b> (owner)</td><td>Everything</td><td>Book, pay, share records, manage consent</td></tr>
+    <tr><td><b>Partner</b></td><td>Plan, schedule, reports (if shared)</td><td>Book, pay, chat with care manager</td></tr>
+    <tr><td><b>Family member</b> (e.g. mother-in-law, NRI parent)</td><td>Schedule, visit logs, photos</td><td>Message; no medical records unless the mother allows</td></tr>
+    <tr><td><b>Caregiver</b> (assigned)</td><td>Today's checklist, care notes</td><td>Check-in / out, log vitals &amp; activities</td></tr>
+  </table>
+  <div class="callout sage" style="margin-top:4mm">Privacy by design: the mother controls who sees health data, in line with the consent requirements of the DPDP Act 2023.</div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>13</span></div>
+</section>
+
+<!-- 13 PACKAGES -->
+<section class="page">
+  <div class="eyebrow">09 · Plans &amp; packs</div>
+  <h2>One complete plan, or just what you need</h2>
+  <p class="lead">Not every family needs 18 months. Plans load <b>Care Credits</b> into the wallet; à-la-carte bookings and add-ons can be paid or redeemed at any time.</p>
+  <div class="grid g3" style="margin-bottom:4mm">
+    <div class="pkg"><div class="tiny">PREGNANCY · 9 MONTHS</div><h3>Garbh</h3><div class="price num">₹24,999</div><ul class="tight small"><li>Monthly → weekly nurse visits</li><li>Dietitian plan, reviewed each trimester</li><li>Scan &amp; test scheduling, report vault</li><li>Yoga ×8, childbirth class</li></ul></div>
+    <div class="pkg"><div class="tiny">POST-DELIVERY · 40 DAYS</div><h3>Sutika</h3><div class="price num">₹19,999</div><ul class="tight small"><li>30 baby massages + first bath</li><li>8 mother massages</li><li>3 nurse visits + 1 lactation visit</li><li>EPDS screening, sutika diet</li></ul></div>
+    <div class="pkg"><div class="tiny">POST-DELIVERY · 3 MONTHS</div><h3>Navjaat 3</h3><div class="price num">₹29,999</div><ul class="tight small"><li>Everything in Sutika</li><li>+ 24 massages (months 2–3)</li><li>Vaccine &amp; growth tracking</li><li>2 physio sessions</li></ul></div>
+    <div class="pkg"><div class="tiny">BABY + MOTHER · 12 MONTHS</div><h3>Pehla Saal</h3><div class="price num">₹49,999</div><ul class="tight small"><li>Navjaat 3 included</li><li>Monthly nurse growth visit</li><li>Weaning &amp; diet plans</li><li>Paeds tele-consults ×6, babyproofing</li></ul></div>
+    <div class="pkg feat"><span class="ribbon">BEST VALUE</span><div class="tiny">COMPLETE · 18 MONTHS</div><h3>Sampoorna</h3><div class="price num">₹69,999</div><ul class="tight small"><li>Garbh + Pehla Saal</li><li>Dedicated care manager</li><li>Priority booking, 10% bonus credits</li><li>Family dashboard + Dadi-on-call</li></ul></div>
+    <div class="pkg"><div class="tiny">PAY AS YOU GO</div><h3>À la carte</h3><div class="price num">from ₹499</div><ul class="tight small"><li>Single baby massage ₹499</li><li>First bath ₹699 · Nurse visit ₹799</li><li>Lactation ₹1,199 · 10 massages ₹4,499</li><li>Japa shifts monthly (see add-ons)</li></ul></div>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <h4>Value per month of care (indicative)</h4>
+      <svg viewBox="0 0 330 140" width="100%">
+        <g font-size="8.5" fill="#5b5164">
+          <text x="0" y="20">Sutika (1.3 m)</text><text x="0" y="45">Navjaat 3 (3 m)</text><text x="0" y="70">Garbh (9 m)</text><text x="0" y="95">Pehla Saal (12 m)</text><text x="0" y="120">Sampoorna (18 m)</text>
+        </g>
+        <line x1="90" y1="5" x2="90" y2="128" stroke="#e9e1e4"/>
+        <g fill="#b4537a">
+          <rect x="90" y="11" width="200" height="12" rx="2"/>
+          <rect x="90" y="36" width="133" height="12" rx="2"/>
+          <rect x="90" y="61" width="37" height="12" rx="2"/>
+          <rect x="90" y="86" width="55" height="12" rx="2"/>
+          <rect x="90" y="111" width="52" height="12" rx="2"/>
+        </g>
+        <g font-size="8.5" fill="#2f2438" font-weight="600">
+          <text x="294" y="21">₹15.0k</text><text x="227" y="46">₹10.0k</text><text x="131" y="71">₹2.8k</text><text x="149" y="96">₹4.2k</text><text x="146" y="121">₹3.9k</text>
+        </g>
+      </svg>
+      <p class="tiny">Long plans give a lower monthly cost, which encourages upgrades. Japa shifts are billed separately.</p>
+    </div>
+    <div class="card tint">
+      <h4>Pricing levers</h4>
+      <ul class="small">
+        <li><b>EMI / monthly instalments</b> for Sampoorna &amp; Pehla Saal</li>
+        <li><b>Upgrade credit:</b> the unused value of a small pack carries into a bigger one</li>
+        <li><b>Gift a plan:</b> gift cards for baby showers and family</li>
+        <li><b>Corporate maternity benefit</b> (B2B), billed to the employer</li>
+        <li><b>Missed-visit guarantee:</b> automatic credit if we're late or absent</li>
+        <li>Zone-based pricing configurable in the admin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>14</span></div>
+</section>
+
+<!-- 14 REFERRAL -->
+<section class="page">
+  <div class="eyebrow">10 · Growth</div>
+  <h2>Referral &amp; growth engine</h2>
+  <p class="lead">Mothers trust other mothers. Referral is the primary acquisition channel, supported by partnerships with doctors and hospitals.</p>
+  <h3>Customer referral flow</h3>
+  <div class="flow" style="margin:2mm 0 5mm">
+    <div class="step"><b>1 · Share</b>Mother shares her code / link (WhatsApp, Instagram).</div><div class="arrow">→</div>
+    <div class="step"><b>2 · Join</b>Friend signs up, gets ₹500 credits on first booking.</div><div class="arrow">→</div>
+    <div class="step"><b>3 · Book</b>Friend completes first paid service ≥ ₹999.</div><div class="arrow">→</div>
+    <div class="step" style="background:var(--blush)"><b>4 · Reward</b>Referrer gets ₹500 credits; ₹2,000 if the friend buys a plan.</div>
+  </div>
+  <div class="grid g3" style="margin-bottom:5mm">
+    <div class="card rose"><h4>Customer → customer</h4><p class="small">Two-sided credits, family invites, milestone badges ("3 friends helped").</p></div>
+    <div class="card sage"><h4>Doctor / hospital → customer</h4><p class="small">Partner-specific QR codes at OPD &amp; discharge desk. Partner earns commission per plan; tracked in the admin.</p></div>
+    <div class="card gold"><h4>Caregiver → caregiver</h4><p class="small">Staff referral bonus for recruiting trained daais and nurses after their 60-day retention.</p></div>
+  </div>
+  <div class="grid g2">
+    <div>
+      <h3>Other channels</h3>
+      <ul>
+        <li>Free <b>pregnancy-care camps</b> in RWAs &amp; sectors, with a nurse BP/Hb check</li>
+        <li>Instagram content in Hindi/Punjabi: "Dadi ke nuskhe vs doctor ki salah"</li>
+        <li>Corporate HR tie-ups: IT parks in Mohali, Panchkula IT Park, Chandigarh offices</li>
+        <li>Pharmacy &amp; baby-store counters with QR</li>
+        <li>Google Business profile per hub; SEO for "baby massage Mohali" etc.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Referral controls (admin)</h3>
+      <ul class="small">
+        <li>Campaign rules: reward amount, eligibility, expiry, caps</li>
+        <li>Fraud checks: same device / phone / address, self-referral</li>
+        <li>Partner commission ledger &amp; monthly payout report</li>
+        <li>Coupon codes by zone and channel; conversion funnel</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>15</span></div>
+</section>
+
+<!-- 15 PLATFORM -->
+<section class="page">
+  <div class="eyebrow">11 · Platform</div>
+  <h2>Users, roles &amp; how a booking flows</h2>
+  <svg viewBox="0 0 600 260" width="100%" style="margin:3mm 0 5mm">
+    <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a8191"/></marker></defs>
+    <rect x="215" y="85" width="170" height="90" rx="10" fill="#2f2438"/>
+    <text x="300" y="118" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Aanchal Platform</text>
+    <text x="300" y="137" text-anchor="middle" fill="#e9dfe6" font-size="9">.NET API · SQL Server</text>
+    <text x="300" y="152" text-anchor="middle" fill="#e9dfe6" font-size="9">Scheduling · Credits · Dispatch</text>
+    <g font-size="10">
+      <rect x="10" y="10" width="160" height="62" rx="8" fill="#f7e6ec"/><text x="90" y="34" text-anchor="middle" font-weight="700" fill="#8e3b5f">Mother &amp; family</text><text x="90" y="52" text-anchor="middle" font-size="8.5" fill="#5b5164">Customer app (Android)</text>
+      <rect x="10" y="188" width="160" height="62" rx="8" fill="#e6f0ea"/><text x="90" y="212" text-anchor="middle" font-weight="700" fill="#3f6b56">Caregivers &amp; nurses</text><text x="90" y="230" text-anchor="middle" font-size="8.5" fill="#5b5164">Caregiver app (Phase 6)</text>
+      <rect x="430" y="10" width="160" height="62" rx="8" fill="#ece6f1"/><text x="510" y="34" text-anchor="middle" font-weight="700" fill="#4b3a5a">Admin &amp; ops team</text><text x="510" y="52" text-anchor="middle" font-size="8.5" fill="#5b5164">.NET MVC admin panel</text>
+      <rect x="430" y="188" width="160" height="62" rx="8" fill="#f8eedb"/><text x="510" y="212" text-anchor="middle" font-weight="700" fill="#8a6014">Partners</text><text x="510" y="230" text-anchor="middle" font-size="8.5" fill="#5b5164">Doctors · hospitals · labs</text>
+    </g>
+    <g stroke="#8a8191" stroke-width="1.3" fill="none" marker-end="url(#ah)">
+      <path d="M170 50 L215 100"/><path d="M215 160 L170 210"/><path d="M385 100 L430 50"/><path d="M385 160 L430 210"/>
+    </g>
+    <g font-size="8" fill="#5b5164">
+      <text x="160" y="85">book · pay · track</text><text x="150" y="190">jobs · check-in</text><text x="392" y="85">manage · dispatch</text><text x="398" y="190">appointments · reports</text>
+    </g>
+  </svg>
+  <h3>Booking life-cycle</h3>
+  <div class="flow" style="margin:2mm 0 5mm;font-size:8pt">
+    <div class="step"><b>Select</b>Service or plan; timing: single / scheduled / plan schedule</div><div class="arrow">→</div>
+    <div class="step"><b>Pay</b>UPI · card · EMI · Care Credits</div><div class="arrow">→</div>
+    <div class="step"><b>Assign</b>Primary caregiver by zone, skill, rating; backup auto-reassign</div><div class="arrow">→</div>
+    <div class="step"><b>Visit</b>OTP check-in, checklist, vitals, photos, live status</div><div class="arrow">→</div>
+    <div class="step"><b>Close</b>Rating, care note in app, SLA &amp; payout</div>
+  </div>
+  <table>
+    <tr><th>Admin role</th><th>Responsibilities</th></tr>
+    <tr><td>Super admin</td><td>Settings, pricing, zones, roles &amp; permissions, finance</td></tr>
+    <tr><td>Hub manager</td><td>Daily dispatch, caregiver shifts, escalations in their zone</td></tr>
+    <tr><td>Care manager</td><td>Owns 40–60 families: onboarding call, plan, weekly check-in</td></tr>
+    <tr><td>Clinical lead (nurse)</td><td>SOPs, vitals alerts, red-flag escalation to partner doctors</td></tr>
+    <tr><td>HR / training</td><td>Recruitment funnel, KYC, police verification, academy, certification</td></tr>
+    <tr><td>Support &amp; finance</td><td>Tickets, refunds, partner commissions, caregiver payouts</td></tr>
+  </table>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>16</span></div>
+</section>
+
+<!-- 16 MODULES -->
+<section class="page">
+  <div class="eyebrow">12 · Product scope</div>
+  <h2>Product modules</h2>
+  <div class="grid g3" style="margin-top:4mm">
+    <div class="card rose">
+      <h3>Customer app</h3><p class="tiny">React Native · Android first</p>
+      <ul class="small tight">
+        <li>OTP login, onboarding by due date / baby DOB</li>
+        <li>Family members &amp; roles</li>
+        <li>Home: stage card ("Week 22"), next visit, tips</li>
+        <li>Plans, packs, add-ons catalogue</li>
+        <li>Booking: service → timing → slot → pay</li>
+        <li>Live visit status, caregiver profile</li>
+        <li>Health vault: reports, prescriptions, scans</li>
+        <li>Trackers: kicks, weight, BP, feeds, sleep, diapers, growth, vaccines</li>
+        <li>Diet plan &amp; daily meal checklist</li>
+        <li>Appointments with partner doctors / labs</li>
+        <li>Wallet, Care Credits, referral, gift a plan</li>
+        <li>Chat / WhatsApp support, SOS button</li>
+        <li>Ratings, complaints, invoices</li>
+        <li>Hindi, Punjabi, English</li>
+      </ul>
+    </div>
+    <div class="card sage">
+      <h3>Caregiver app</h3><p class="tiny">Same RN codebase, role-based · Phase 6</p>
+      <ul class="small tight">
+        <li>Shift calendar &amp; job list</li>
+        <li>Navigation to home; OTP / geo check-in</li>
+        <li>Visit checklist per service SOP</li>
+        <li>Log vitals, feeds, massage, photos</li>
+        <li>Red-flag button → clinical lead</li>
+        <li>Training modules &amp; certification status</li>
+        <li>Earnings, incentives, leave</li>
+        <li>SOS for caregiver safety</li>
+      </ul>
+      <p class="tiny" style="margin-top:2mm">Until Phase 6, hub managers update visits from the admin panel.</p>
+    </div>
+    <div class="card" style="background:#f4f0f7;border-color:#e3dbe9">
+      <h3>Admin panel</h3><p class="tiny">.NET MVC · Bootstrap</p>
+      <ul class="small tight">
+        <li>Dashboard KPIs &amp; alerts</li>
+        <li>Customers, families, pregnancies, babies</li>
+        <li>Bookings &amp; dispatch board, auto-reassign</li>
+        <li>Caregivers: recruitment → KYC → police check → training → shifts</li>
+        <li>Partners &amp; commission ledger</li>
+        <li>Services, packages, add-ons, pricing by zone</li>
+        <li>Zones / hubs</li>
+        <li>Payments, refunds, credits, invoices (GST)</li>
+        <li>Referrals, coupons, campaigns</li>
+        <li>Content: diet templates, articles, SOPs</li>
+        <li>Reviews, tickets, SLA timers</li>
+        <li>Reports &amp; exports; audit log</li>
+        <li>Roles &amp; permissions</li>
+      </ul>
+    </div>
+  </div>
+  <h3 style="margin-top:5mm">MVP vs. later</h3>
+  <table>
+    <tr><th style="width:18%">Release</th><th>Scope</th></tr>
+    <tr><td><span class="pill">MVP (pilot)</span></td><td>Onboarding, plans &amp; à la carte booking, payments, Care Credits, visit logs, basic trackers (kicks, feeds, vaccines), referral, admin core (bookings, caregivers, packages, customers, partners)</td></tr>
+    <tr><td><span class="pill sage">v1.1</span></td><td>Diet plans, health vault, partner appointments, family roles, WhatsApp notifications, EPDS screening</td></tr>
+    <tr><td><span class="pill gold">v2</span></td><td>Caregiver app, live tracking, tele-consult, corporate B2B portal, Hindi/Punjabi UI, iOS</td></tr>
+  </table>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>17</span></div>
+</section>
+
+<!-- 17 ARCHITECTURE -->
+<section class="page">
+  <div class="eyebrow">13 · Technology</div>
+  <h2>Architecture &amp; data model</h2>
+  <svg viewBox="0 0 600 250" width="100%" style="margin-bottom:4mm">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8a8191"/></marker></defs>
+    <g font-size="9.5">
+      <rect x="10" y="20" width="150" height="50" rx="7" fill="#f7e6ec"/><text x="85" y="42" text-anchor="middle" font-weight="700">Customer app</text><text x="85" y="57" text-anchor="middle" font-size="8" fill="#5b5164">React Native · Android</text>
+      <rect x="10" y="95" width="150" height="50" rx="7" fill="#e6f0ea"/><text x="85" y="117" text-anchor="middle" font-weight="700">Caregiver app</text><text x="85" y="132" text-anchor="middle" font-size="8" fill="#5b5164">React Native (Phase 6)</text>
+      <rect x="10" y="170" width="150" height="50" rx="7" fill="#ece6f1"/><text x="85" y="192" text-anchor="middle" font-weight="700">Admin panel</text><text x="85" y="207" text-anchor="middle" font-size="8" fill="#5b5164">ASP.NET Core MVC</text>
+
+      <rect x="215" y="20" width="170" height="200" rx="9" fill="#2f2438"/>
+      <text x="300" y="44" text-anchor="middle" fill="#fff" font-weight="700" font-size="11">ASP.NET Core Web API</text>
+      <g fill="#e9dfe6" font-size="8.5" text-anchor="middle">
+        <text x="300" y="66">JWT auth · role policies</text>
+        <text x="300" y="84">Booking &amp; scheduling engine</text>
+        <text x="300" y="102">Care-plan generator (due date)</text>
+        <text x="300" y="120">Credits wallet &amp; payments</text>
+        <text x="300" y="138">Dispatch &amp; reassign</text>
+        <text x="300" y="156">Notifications · referral</text>
+        <text x="300" y="174">Hangfire background jobs</text>
+        <text x="300" y="196" fill="#f3c1d3">Clean architecture · EF Core</text>
+      </g>
+
+      <rect x="440" y="20" width="150" height="50" rx="7" fill="#e5eef7"/><text x="515" y="42" text-anchor="middle" font-weight="700">SQL Server</text><text x="515" y="57" text-anchor="middle" font-size="8" fill="#5b5164">EF Core migrations</text>
+      <rect x="440" y="85" width="150" height="40" rx="7" fill="#f8eedb"/><text x="515" y="109" text-anchor="middle" font-size="8.5">Blob storage (reports, photos)</text>
+      <rect x="440" y="135" width="150" height="85" rx="7" fill="#fbf7f3" stroke="#e9e1e4"/>
+      <text x="515" y="153" text-anchor="middle" font-weight="700" font-size="9">Integrations</text>
+      <g font-size="8" fill="#5b5164" text-anchor="middle"><text x="515" y="169">Razorpay (UPI, cards, EMI)</text><text x="515" y="182">MSG91 SMS · WhatsApp API</text><text x="515" y="195">Firebase push · Google Maps</text><text x="515" y="208">Video consult SDK (v2)</text></g>
+    </g>
+    <g stroke="#8a8191" stroke-width="1.3" fill="none" marker-end="url(#a2)">
+      <path d="M160 45 L213 60"/><path d="M160 120 L213 120"/><path d="M160 195 L213 180"/>
+      <path d="M385 45 L438 45"/><path d="M385 105 L438 105"/><path d="M385 175 L438 175"/>
+    </g>
+  </svg>
+  <div class="grid g2">
+    <div>
+      <h3>Solution structure</h3>
+      <table style="font-size:8.2pt">
+        <tr><td><b>Aanchal.Core</b></td><td>Entities, enums, domain rules, interfaces</td></tr>
+        <tr><td><b>Aanchal.Application</b></td><td>Services, DTOs, validation (FluentValidation), mapping</td></tr>
+        <tr><td><b>Aanchal.Infrastructure</b></td><td>EF Core DbContext, repositories, payment &amp; SMS adapters</td></tr>
+        <tr><td><b>Aanchal.Api</b></td><td>REST controllers, JWT, Swagger, rate limits</td></tr>
+        <tr><td><b>Aanchal.Admin</b></td><td>MVC + Razor views (Bootstrap template), cookie auth</td></tr>
+        <tr><td><b>Aanchal.Mobile</b></td><td>React Native app (TypeScript, React Query)</td></tr>
+      </table>
+      <h3 style="margin-top:4mm">Non-functional</h3>
+      <ul class="small tight">
+        <li>DPDP Act consent, encryption at rest for health data, audit log</li>
+        <li>Role-based access; health data visible only to permitted roles</li>
+        <li>Azure App Service + Azure SQL (or a VPS in India), daily backups</li>
+        <li>CI/CD with GitHub Actions; staging + production</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Core entities</h3>
+      <svg viewBox="0 0 280 250" width="100%">
+        <g font-size="8" text-anchor="middle">
+          <g fill="#f7e6ec" stroke="#b4537a"><rect x="95" y="5" width="90" height="24" rx="4"/></g><text x="140" y="21" font-weight="700">User / Family</text>
+          <g fill="#fbf7f3" stroke="#d6cbd0"><rect x="5" y="55" width="80" height="22" rx="4"/><rect x="100" y="55" width="80" height="22" rx="4"/><rect x="195" y="55" width="80" height="22" rx="4"/></g>
+          <text x="45" y="70">FamilyMember</text><text x="140" y="70">Pregnancy</text><text x="235" y="70">Baby</text>
+          <g fill="#fbf7f3" stroke="#d6cbd0"><rect x="100" y="100" width="80" height="22" rx="4"/><rect x="195" y="100" width="80" height="22" rx="4"/><rect x="5" y="100" width="80" height="22" rx="4"/></g>
+          <text x="140" y="115">HealthRecord</text><text x="235" y="115">GrowthLog</text><text x="45" y="115">DietPlan</text>
+          <g fill="#e6f0ea" stroke="#5e8c76"><rect x="5" y="150" width="80" height="22" rx="4"/><rect x="100" y="150" width="80" height="22" rx="4"/><rect x="195" y="150" width="80" height="22" rx="4"/></g>
+          <text x="45" y="165">Package</text><text x="140" y="165">Subscription</text><text x="235" y="165">CreditLedger</text>
+          <g fill="#ece6f1" stroke="#4b3a5a"><rect x="5" y="200" width="80" height="22" rx="4"/><rect x="100" y="200" width="80" height="22" rx="4"/><rect x="195" y="200" width="80" height="22" rx="4"/></g>
+          <text x="45" y="215">Service</text><text x="140" y="215">Booking → Visit</text><text x="235" y="215">Caregiver</text>
+          <text x="45" y="243" fill="#5b5164">Zone</text><text x="140" y="243" fill="#5b5164">Payment · Review</text><text x="235" y="243" fill="#5b5164">Partner · Referral</text>
+        </g>
+        <g stroke="#b9adb3" stroke-width="1">
+          <path d="M140 29V55M120 29L45 55M160 29L235 55M140 77V100M235 77V100M140 122V150M45 172V200M140 172V200M235 172V200M85 211H100M180 211H195M85 161H100M180 161H195"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>18</span></div>
+</section>
+
+<!-- 18 OPERATIONS -->
+<section class="page">
+  <div class="eyebrow">14 · Operations</div>
+  <h2>Caregivers: hiring, training &amp; quality</h2>
+  <p class="lead">Trust is the product. Every caregiver who enters a home is screened, trained, certified and monitored.</p>
+  <div class="grid g2" style="margin-bottom:5mm">
+    <div class="card">
+      <h3>Recruitment funnel (per 100 applicants)</h3>
+      <svg viewBox="0 0 320 170" width="100%">
+        <g font-size="8.5" fill="#5b5164">
+          <text x="0" y="16">Applications</text><text x="0" y="44">Phone + skill screen</text><text x="0" y="72">In-person interview</text><text x="0" y="100">KYC + police verification</text><text x="0" y="128">Academy (7–15 days)</text><text x="0" y="156">Certified &amp; deployed</text>
+        </g>
+        <g fill="#5e8c76">
+          <rect x="120" y="5" width="170" height="16" rx="2"/>
+          <rect x="120" y="33" width="102" height="16" rx="2"/>
+          <rect x="120" y="61" width="60" height="16" rx="2"/>
+          <rect x="120" y="89" width="43" height="16" rx="2"/>
+          <rect x="120" y="117" width="36" height="16" rx="2"/>
+          <rect x="120" y="145" width="29" height="16" rx="2"/>
+        </g>
+        <g font-size="8.5" font-weight="600" fill="#2f2438"><text x="294" y="17">100</text><text x="226" y="45">60</text><text x="184" y="73">35</text><text x="167" y="101">25</text><text x="160" y="129">21</text><text x="153" y="157">17</text></g>
+      </svg>
+      <p class="tiny">Planning assumption, modelled on Pronto's ~1 in 6 selection rate<sup>[1]</sup>.</p>
+    </div>
+    <div class="card tint">
+      <h3>Aanchal Academy tracks</h3>
+      <table style="font-size:8.2pt">
+        <tr><td><b>Daai-maa</b><br><span class="tiny">7 days</span></td><td>Traditional massage technique, safe oils, bathing, cord &amp; nail care, hygiene, newborn red flags (jaundice, fever, breathing)</td></tr>
+        <tr><td><b>Japa</b><br><span class="tiny">10 days</span></td><td>Newborn feeding support, burping, sleep, mother's recovery care, sutika diet basics, safe sleep</td></tr>
+        <tr><td><b>Nurse</b><br><span class="tiny">GNM/ANM + 5 days</span></td><td>Aanchal clinical SOPs, vitals, EPDS, wound care, escalation protocol, app use</td></tr>
+        <tr><td><b>All</b></td><td>Soft skills, privacy, family etiquette, app use, safety &amp; SOS, monthly refreshers</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="grid g3">
+    <div class="card rose"><h4>Quality controls</h4><ul class="small tight"><li>OTP check-in / out</li><li>Checklist per visit</li><li>Rating after every visit</li><li>Random supervisor audits</li><li>Re-training below 4.3★</li></ul></div>
+    <div class="card sage"><h4>Caregiver welfare</h4><ul class="small tight"><li>Fixed salary + incentives</li><li>Health &amp; accident insurance</li><li>Guaranteed shifts</li><li>Career path: daai → senior → trainer</li><li>Safety SOS</li></ul></div>
+    <div class="card gold"><h4>Service SLAs</h4><ul class="small tight"><li>On-time arrival ≥ 95%</li><li>Backup caregiver within 2h</li><li>Nurse callback in 15 min (helpline)</li><li>Complaint resolution &lt; 24h</li><li>Refund / credit &lt; 48h</li></ul></div>
+  </div>
+  <h3 style="margin-top:5mm">Pilot team (2 hubs)</h3>
+  <p class="small">12 daai-maa · 6 japa · 3 nurses · 2 care managers · 1 hub manager · 1 clinical lead (part-time) · 1 support executive · dietitian &amp; physio as partners.</p>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>19</span></div>
+</section>
+
+<!-- 19 ROADMAP -->
+<section class="page">
+  <div class="eyebrow">15 · Delivery plan</div>
+  <h2>Roadmap</h2>
+  <p class="lead">About 9 months from plan sign-off to a running pilot; Phases 3 and 4 overlap to save time.</p>
+  <svg viewBox="0 0 600 300" width="100%">
+    <g font-size="8" fill="#8a8191" text-anchor="middle">
+      <text x="195" y="12">M1</text><text x="240" y="12">M2</text><text x="285" y="12">M3</text><text x="330" y="12">M4</text><text x="375" y="12">M5</text><text x="420" y="12">M6</text><text x="465" y="12">M7</text><text x="510" y="12">M8</text><text x="555" y="12">M9</text>
+    </g>
+    <g stroke="#efe8eb"><path d="M173 18V290M218 18V290M263 18V290M308 18V290M353 18V290M398 18V290M443 18V290M488 18V290M533 18V290M578 18V290"/></g>
+    <g font-size="9" fill="#2f2438">
+      <text x="0" y="40" font-weight="700">1 · Plan &amp; research</text>
+      <text x="0" y="72" font-weight="700">2 · UI templates</text>
+      <text x="0" y="104" font-weight="700">3 · DB, API, admin</text>
+      <text x="0" y="136" font-weight="700">4 · Customer app</text>
+      <text x="0" y="168">Caregiver hiring &amp; academy</text>
+      <text x="0" y="200">Partner tie-ups</text>
+      <text x="0" y="232">QA, UAT, Play Store</text>
+      <text x="0" y="264" font-weight="700">5 · Pilot (2 hubs)</text>
+    </g>
+    <g>
+      <rect x="175" y="30" width="20" height="14" rx="3" fill="#b4537a"/>
+      <rect x="195" y="62" width="45" height="14" rx="3" fill="#b4537a"/>
+      <rect x="230" y="94" width="112" height="14" rx="3" fill="#4b3a5a"/>
+      <rect x="285" y="126" width="112" height="14" rx="3" fill="#4b3a5a"/>
+      <rect x="330" y="158" width="112" height="14" rx="3" fill="#5e8c76"/>
+      <rect x="285" y="190" width="157" height="14" rx="3" fill="#5e8c76"/>
+      <rect x="398" y="222" width="45" height="14" rx="3" fill="#c08a2e"/>
+      <rect x="443" y="254" width="135" height="14" rx="3" fill="#b4537a"/>
+    </g>
+    <g font-size="7.5" fill="#fff" font-weight="600">
+      <text x="179" y="40">2w</text><text x="200" y="72">4w</text><text x="236" y="104">10 weeks</text><text x="291" y="136">10 weeks</text><text x="336" y="168">10 weeks</text><text x="291" y="200">ongoing</text><text x="402" y="232">4w</text><text x="449" y="264">12 weeks</text>
+    </g>
+    <g fill="#2f2438"><path d="M443 280l5 8h-10z"/></g><text x="452" y="290" font-size="8" fill="#2f2438" font-weight="600">Go-live</text>
+  </svg>
+  <div class="grid g3" style="margin-top:3mm">
+    <div class="card rose"><h4>Phase 1–2 · now</h4><ul class="small tight"><li>This project plan (PDF)</li><li>Landing, admin &amp; user templates</li><li>Client sign-off on scope &amp; brand</li></ul></div>
+    <div class="card" style="background:#f4f0f7;border-color:#e3dbe9"><h4>Phase 3–4</h4><ul class="small tight"><li>DB schema &amp; EF migrations</li><li>REST API + Swagger</li><li>Admin panel on the approved template</li><li>RN customer app MVP</li></ul></div>
+    <div class="card sage"><h4>Phase 5–6</h4><ul class="small tight"><li>Pilot: Chandigarh + Mohali</li><li>Target 150 families in 3 months</li><li>Caregiver app, Panchkula &amp; Zirakpur</li><li>Then Ludhiana, Jalandhar</li></ul></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>20</span></div>
+</section>
+
+<!-- 20 BUSINESS -->
+<section class="page">
+  <div class="eyebrow">16 · Business model</div>
+  <h2>Revenue model &amp; projections</h2>
+  <p class="lead">Revenue comes from plans, à la carte services, japa shifts and partner commissions. All figures below are <b>illustrative assumptions</b> for discussion and must be validated in the pilot.</p>
+  <div class="grid g2" style="margin-bottom:5mm">
+    <div class="card">
+      <h4>Revenue projection, ₹ crore (assumption)</h4>
+      <svg viewBox="0 0 300 180" width="100%">
+        <g stroke="#efe8eb"><path d="M40 20H290M40 60H290M40 100H290M40 140H290"/></g>
+        <g font-size="8" fill="#8a8191" text-anchor="end"><text x="34" y="143">0</text><text x="34" y="103">2.5</text><text x="34" y="63">5</text><text x="34" y="23">7.5</text></g>
+        <g fill="#b4537a"><rect x="70" y="117.6" width="44" height="22.4" rx="3"/><rect x="155" y="79.2" width="44" height="60.8" rx="3"/><rect x="240" y="20" width="44" height="120" rx="3"/></g>
+        <g font-size="9" font-weight="700" fill="#2f2438" text-anchor="middle"><text x="92" y="112">1.4</text><text x="177" y="74">3.8</text><text x="262" y="15">7.5</text></g>
+        <g font-size="8.5" fill="#5b5164" text-anchor="middle"><text x="92" y="156">Year 1</text><text x="177" y="156">Year 2</text><text x="262" y="156">Year 3</text></g>
+        <g font-size="7.5" fill="#8a8191" text-anchor="middle"><text x="92" y="168">2 hubs</text><text x="177" y="168">4 hubs</text><text x="262" y="168">Tricity + 2 cities</text></g>
+      </svg>
+    </div>
+    <div class="card">
+      <h4>Year-3 revenue mix (assumption)</h4>
+      <svg viewBox="0 0 300 180" width="100%">
+        <g>
+          <rect x="10" y="20" width="155" height="26" rx="3" fill="#b4537a"/>
+          <rect x="167" y="20" width="43" height="26" fill="#8e3b5f"/>
+          <rect x="212" y="20" width="46" height="26" fill="#5e8c76"/>
+          <rect x="260" y="20" width="30" height="26" rx="3" fill="#c08a2e"/>
+        </g>
+        <g font-size="8.5" fill="#2f2438">
+          <rect x="10" y="70" width="9" height="9" rx="2" fill="#b4537a"/><text x="25" y="78">Plans &amp; packs — 56%</text>
+          <rect x="10" y="92" width="9" height="9" rx="2" fill="#8e3b5f"/><text x="25" y="100">Japa / caregiver shifts — 16%</text>
+          <rect x="10" y="114" width="9" height="9" rx="2" fill="#5e8c76"/><text x="25" y="122">À la carte &amp; add-ons — 17%</text>
+          <rect x="10" y="136" width="9" height="9" rx="2" fill="#c08a2e"/><text x="25" y="144">Partner commissions &amp; B2B — 11%</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <table>
+    <tr><th>Assumption</th><th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th></tr>
+    <tr><td>Families served (plans)</td><td class="num">~270</td><td class="num">~650</td><td class="num">~1,100</td></tr>
+    <tr><td>Average plan value</td><td class="num">₹32k</td><td class="num">₹35k</td><td class="num">₹38k</td></tr>
+    <tr><td>À la carte bookings / month (avg)</td><td class="num">~300</td><td class="num">~800</td><td class="num">~1,500</td></tr>
+    <tr><td>Target gross margin (services)</td><td class="num">25%</td><td class="num">32%</td><td class="num">38%</td></tr>
+    <tr><td>Caregivers on payroll</td><td class="num">~25</td><td class="num">~60</td><td class="num">~120</td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:4mm">
+    <div class="card tint"><h4>Indicative build cost (Phase 3–4)</h4><p class="small">Team of 1 tech lead (.NET), 1 .NET dev, 1 RN dev, 1 UI/QA, part-time PM for ~5 months. Cloud + third-party APIs ≈ ₹15–25k/month at pilot scale. Detailed estimate to follow after scope sign-off.</p></div>
+    <div class="card tint"><h4>Unit economics to prove in pilot</h4><p class="small">CAC &lt; ₹2,500 · plan conversion from à la carte ≥ 25% · caregiver utilisation ≥ 70% · NPS ≥ 60 · repeat / referral share ≥ 40%.</p></div>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>21</span></div>
+</section>
+
+<!-- 21 KPI RISK -->
+<section class="page">
+  <div class="eyebrow">17 · Measure &amp; manage</div>
+  <h2>KPIs &amp; risk register</h2>
+  <div class="grid g4" style="margin:4mm 0 5mm">
+    <div class="card rose"><div class="stat" style="font-size:19pt">150</div><div class="stat-l">families in the 3-month pilot</div></div>
+    <div class="card rose"><div class="stat" style="font-size:19pt">≥ 4.6★</div><div class="stat-l">average visit rating</div></div>
+    <div class="card rose"><div class="stat" style="font-size:19pt">≥ 95%</div><div class="stat-l">on-time visits</div></div>
+    <div class="card rose"><div class="stat" style="font-size:19pt">≥ 40%</div><div class="stat-l">new families via referral</div></div>
+  </div>
+  <table style="margin-bottom:5mm">
+    <tr><th>Area</th><th>KPI</th><th>Target</th></tr>
+    <tr><td>Growth</td><td>Monthly new families · plan conversion · referral share</td><td>+25% MoM · 25% · 40%</td></tr>
+    <tr><td>Quality</td><td>Rating · complaints per 100 visits · repeat booking</td><td>4.6 · &lt; 2 · 60%</td></tr>
+    <tr><td>Operations</td><td>Caregiver utilisation · backup within 2h · attrition</td><td>70% · 98% · &lt; 5%/month</td></tr>
+    <tr><td>Clinical</td><td>Red-flag escalation time · EPDS screening coverage</td><td>&lt; 30 min · 100%</td></tr>
+    <tr><td>Finance</td><td>CAC · gross margin · collection on time</td><td>&lt; ₹2,500 · 25%+ · 98%</td></tr>
+  </table>
+  <h3>Risk register</h3>
+  <table style="font-size:8.3pt">
+    <tr><th style="width:26%">Risk</th><th style="width:10%">Impact</th><th>Mitigation</th></tr>
+    <tr><td>Safety incident with a baby or mother</td><td><span class="pill">High</span></td><td>Clinical SOPs, doctor clearance before massage/bath, red-flag escalation, insurance, incident review</td></tr>
+    <tr><td>Caregiver supply &amp; attrition</td><td><span class="pill">High</span></td><td>Fixed pay + insurance, career path, referral bonus, academy pipeline ahead of demand</td></tr>
+    <tr><td>Trust in a new brand</td><td><span class="pill gold">Medium</span></td><td>Hospital &amp; doctor partners, verified badges, free first visit, camps, testimonials from pilot</td></tr>
+    <tr><td>Price sensitivity</td><td><span class="pill gold">Medium</span></td><td>₹499 entry service, small packs, EMI, corporate benefit</td></tr>
+    <tr><td>Health-data privacy (DPDP Act)</td><td><span class="pill gold">Medium</span></td><td>Consent flows, encryption, role-based access, data-retention policy, legal review</td></tr>
+    <tr><td>Scope creep / medical liability</td><td><span class="pill gold">Medium</span></td><td>No diagnosis by caregivers; nurses within scope; doctors via partners; clear T&amp;Cs</td></tr>
+    <tr><td>Competitor entry (UC, Apollo)</td><td><span class="pill sage">Low–Med</span></td><td>Local depth, partner network, 18-month relationship, regional language &amp; tradition</td></tr>
+  </table>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>22</span></div>
+</section>
+
+<!-- 22 NEXT + SOURCES -->
+<section class="page">
+  <div class="eyebrow">18 · Next steps</div>
+  <h2>Decisions needed &amp; next steps</h2>
+  <div class="grid g2" style="margin:4mm 0 6mm">
+    <div class="card rose">
+      <h3>Client decisions</h3>
+      <ol class="small" style="padding-left:5mm;margin:0">
+        <li>Final brand name (Aanchal / MaaSathi / Navya Care) and domain</li>
+        <li>Approve service catalogue &amp; MVP scope</li>
+        <li>Approve indicative pricing for pilot</li>
+        <li>Pilot zones: Chandigarh + Mohali?</li>
+        <li>First partner hospitals, labs &amp; doctors to approach</li>
+        <li>Hosting: Azure vs. Indian VPS</li>
+      </ol>
+    </div>
+    <div class="card sage">
+      <h3>Next 4 weeks</h3>
+      <ol class="small" style="padding-left:5mm;margin:0">
+        <li>Review UI templates (landing, admin, user)</li>
+        <li>50 interviews with expecting / new mothers in Tricity</li>
+        <li>Shortlist 20 daai-maa &amp; 5 nurses; design academy</li>
+        <li>Legal: company setup, T&amp;Cs, privacy policy, caregiver contracts</li>
+        <li>Finalise DB schema &amp; API contracts; start Phase 3</li>
+      </ol>
+    </div>
+  </div>
+  <h3>Sources</h3>
+  <ol class="small" style="padding-left:5mm">
+    <li>YourStory — "Pronto's 10-minute model is reshaping domestic help in urban India" (Nov 2025). yourstory.com/2025/11/prontos-10-minute-model-redefining-domestic-help-in-urban-india</li>
+    <li>Business Today — "Pronto's rapid rise…" (Oct 2026). businesstoday.in/india/story/prontos-rapid-rise-…-559610-2026-10-06</li>
+    <li>Apple App Store — "Pronto: House Help in Minutes" listing. apps.apple.com/in/app/pronto-house-help-in-10-mins/id6743402816</li>
+    <li>Swarajya — "Jaapa: India has one of the oldest postpartum traditions but it is China that has built an industry". swarajyamag.com/business/jaapa-…</li>
+    <li>Max@Home — Japa maid service, Panchkula. maxathome.in/service/japa-maid/panchkula/sector-6</li>
+    <li>Apollo HomeCare — Mother &amp; child care (city list). apollohomecare.com/long-term-care/mother-and-child-care/</li>
+    <li>Cloudnine Hospital Chandigarh (credihealth.com) and Motherhood Hospitals Mohali (motherhoodindia.com/locations/mohali) — public listings.</li>
+  </ol>
+  <p class="tiny" style="margin-top:4mm">Tricity population, birth estimates, pricing and financial projections are internal planning assumptions. Medical schedules (scans, tests, vaccines) are shown for planning and are always followed as advised by the treating doctor. Pronto is referenced for business-model learning only; Aanchal's design and content are original.</p>
+  <div style="position:absolute;left:17mm;right:17mm;bottom:22mm;display:flex;align-items:center;gap:3mm;font-family:Lora,serif;font-size:13pt;font-weight:600">
+    <svg width="28" height="28" viewBox="0 0 40 40"><path d="M20 35C9 27 4 20 4 13a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 7-5 14-16 22Z" fill="#b4537a"/><circle cx="20" cy="17" r="5" fill="#fff"/></svg>
+    Aanchal <span style="font-family:Inter;font-size:9pt;font-weight:400;color:var(--ink2)">— care that holds you, from bump to baby steps.</span>
+  </div>
+  <div class="foot"><span>Aanchal · Project plan v1.0</span><span>23</span></div>
+</section>
+
+</body>
+</html>
